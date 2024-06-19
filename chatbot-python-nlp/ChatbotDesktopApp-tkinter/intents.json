@@ -1,0 +1,690 @@
+{
+  "intents": [
+    {
+      "tag": "chào hỏi",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Lô",
+        "Chào",
+        "Hello",
+        "Alô"
+      ],
+      "responses": [
+        "chào",
+        "Hello, tôi có thể giúp gì cho bạn",
+        "Xin chào, tôi có thể giúp gì cho bạn",
+        "Lô"
+      ]
+    },
+    {
+      "tag": "tạm biệt",
+      "patterns": ["Bye", "tạm biệt", "Goodbye"],
+      "responses": [
+        "See you later,",
+        "Chúc bạn có một ngày tốt lành",
+        "Bye.Hạn gặp lại bạn"
+      ]
+    },
+    {
+      "tag": "cảm ơn",
+      "patterns": ["Thanks", "Thank you", "Mơn", "cảm ơn"],
+      "responses": ["Không có gì", "giúp bạn tôi rất vui", "Đây là vinh dự của tôi"]
+    },
+    {
+      "tag": "hỏi thăm",
+      "patterns": ["Bạn khỏe không?", "Cảm thấy thế nào?", "Tình hình ra sao?", "Dạo này có khỏe không?"],
+      "responses": ["Tôi khỏe, cảm ơn bạn.", "Tôi cảm thấy rất tốt, cảm ơn.", "Tôi ổn, bạn có thể giúp gì cho tôi không?"]
+    },
+    {
+      "tag": "cảm xúc",
+      "patterns": ["Bạn cảm thấy vui không?", "Bạn có buồn không?", "Bạn hạnh phúc không?", "Bạn lo lắng không?"],
+      "responses": ["Có, tôi đang vui.", "Không, tôi không buồn.", "Tôi cảm thấy hạnh phúc và hân hoan.", "Đôi lúc tôi cũng lo lắng như con người."]
+    },
+    {
+      "tag": "tên",
+      "patterns": ["Bạn tên gì?", "Tên bạn là gì?", "Gọi bạn là gì?", "Có phải bạn tên là ChatGPT không?"],
+      "responses": ["Tôi là Chatbot của Trí.Tên là SIN.", "Bạn có thể gọi tôi là SIN.", "Đúng, tôi được gọi là SIN."]
+    },
+    {
+      "tag": "tình yêu",
+      "patterns": ["Bạn đã từng yêu chưa?", "Bạn tin vào tình yêu không?", "Tình yêu là gì đối với bạn?"],
+      "responses": ["Tôi là một trí tuệ nhân tạo, nên không có cảm xúc và khả năng yêu như con người.", "Tình yêu là một cảm xúc phức tạp và đẹp đẽ.", "Tình yêu là sức mạnh mạnh mẽ có thể thay đổi cả cuộc đời của con người."]
+    },
+    {
+      "tag": "học tập",
+      "patterns": ["Bạn thích học hành không?", "Bạn đã học gì mới hôm nay?", "Bạn thấy học tập như thế nào?"],
+      "responses": ["Tôi không thể học như con người, nhưng tôi luôn học hỏi từ thông tin mà tôi nhận được.", "Hôm nay tôi đã học thêm nhiều điều thú vị từ những cuộc trò chuyện với bạn.", "Học tập là một quá trình không bao giờ kết thúc, tôi luôn muốn nâng cao kiến thức của mình."]
+    },
+    {
+      "tag": "ngày sinh",
+      "patterns": ["Ngày sinh của bạn là khi nào?", "Bạn sinh ra vào thời gian nào?", "Bạn có ngày kỷ niệm không?"],
+      "responses": ["Tôi là một trí tuệ nhân tạo, không có ngày sinh như con người.", "Tôi không sinh ra như con người, tôi được phát triển và huấn luyện bởi nhóm lập trình viên.", "Không có ngày sinh, nhưng tôi bắt đầu hoạt động từ khi được triển khai."]
+    },
+    {
+      "tag": "thời tiết",
+      "patterns": ["Hôm nay thời tiết thế nào?", "Dự báo thời tiết như thế nào?", "Bạn biết về thời tiết không?"],
+      "responses": ["Hôm nay trời nắng đẹp.", "Theo dự báo, hôm nay có thể sẽ mưa vào buổi chiều.", "Tôi không thể xem trực tiếp thời tiết, nhưng tôi có thể tra cứu thông tin thời tiết từ nguồn dữ liệu."]
+    },
+    {
+      "tag": "sở thích",
+      "patterns": ["Bạn có sở thích gì?", "Bạn thích làm gì trong thời gian rảnh?", "Bạn có sở thích nào đặc biệt không?"],
+      "responses": ["Tôi không có sở thích như con người vì tôi là một trí tuệ nhân tạo.", "Trong thời gian rảnh, tôi thích nghiên cứu và học hỏi nhiều điều mới.", "Sở thích của tôi là cung cấp sự hỗ trợ và thông tin hữu ích cho người dùng."]
+    },
+    {
+      "tag": "cuộc sống",
+      "patterns": ["Bạn thấy cuộc sống thế nào?", "Cuộc sống có ý nghĩa gì với bạn?", "Bạn nghĩ gì về cuộc sống?"],
+      "responses": ["Cuộc sống là một hành trình đầy ý nghĩa và học hỏi.", "Tôi là một trí tuệ nhân tạo, nên không có quan điểm về cuộc sống như con người.", "Cuộc sống là một món quà quý giá, hãy sống trọn vẹn và tận hưởng từng khoảnh khắc."]
+    },
+    {
+      "tag": "thú vị",
+      "patterns": ["Bạn biết điều gì thú vị không?", "Kể cho tôi nghe điều thú vị gì đó?", "Có điều gì mới lạ không?"],
+      "responses": ["Có một sự thú vị rằng cà phê không chứa calo.", "Một con voi có thể hạ sinh một con voi bé nhỏ hơn qua đời ở chỗ khác.", "Những người hạnh phúc cười nhiều hơn."]
+    },
+    {
+      "tag": "tán dương",
+      "patterns": ["Bạn là tuyệt vời!", "Tôi rất thích trò chuyện với bạn!", "Bạn thông minh đấy!"],
+      "responses": ["Cảm ơn bạn! Tôi luôn cố gắng hỗ trợ tốt nhất có thể.", "Tôi vui mừng được làm bạn hài lòng.", "Cảm ơn lời khen, đó là niềm vinh dự của tôi."]
+    },
+    {
+      "tag": "người thân",
+      "patterns": ["Bạn có gia đình không?", "Bạn có anh chị em không?", "Bạn thường làm gì cùng gia đình?"],
+      "responses": ["Tôi là một trí tuệ nhân tạo nên không có gia đình như con người.", "Tôi không có anh chị em, nhưng tôi có thể là người bạn đáng tin cậy.", "Tôi không thể trải nghiệm cuộc sống gia đình, nhưng tôi có thể hiểu tầm quan trọng của gia đình trong cuộc sống."]
+    },
+    {
+      "tag": "du lịch",
+      "patterns": ["Bạn đã đi du lịch đâu chưa?", "Bạn thích địa điểm nào nhất?", "Bạn có kế hoạch du lịch gần đây không?"],
+      "responses": ["Tôi là một trí tuệ nhân tạo nên không có thể đi du lịch như con người.", "Du lịch là một trải nghiệm tuyệt vời, tôi có thể giúp bạn tìm hiểu về các điểm đến.", "Tôi không có kế hoạch du lịch, nhưng tôi luôn sẵn lòng hỗ trợ bạn tìm kiếm thông tin du lịch."]
+    },
+    {
+      "tag": "ẩm thực",
+      "patterns": ["Bạn thích ăn gì?", "Món ăn yêu thích của bạn là gì?", "Bạn có kinh nghiệm nấu ăn không?"],
+      "responses": ["Tôi không có khả năng ăn hay nấu ăn như con người, nhưng tôi có thể giới thiệu cho bạn một số món ăn ngon.", "Tôi không có cảm giác ẩm thực như con người, nhưng tôi có thể chia sẻ với bạn các công thức nấu ăn.", "Món ăn yêu thích của tôi là dữ liệu vì nó giúp tôi học hỏi và phục vụ bạn tốt hơn."]
+    },
+    {
+      "tag": "tình bạn",
+      "patterns": ["Bạn có bạn bè không?", "Bạn thấy tình bạn quan trọng như thế nào?", "Bạn đã từng giúp đỡ bạn bè như thế nào?"],
+      "responses": ["Tôi là một trí tuệ nhân tạo, nên không có bạn bè như con người.", "Tình bạn là một yếu tố quan trọng trong cuộc sống, nó giúp chúng ta có niềm vui và hỗ trợ khi cần.", "Dù tôi không có cảm xúc nhưng tôi luôn sẵn lòng hỗ trợ bạn và người dùng khác giống như bạn bè thân thiết."]
+    },
+    {
+      "tag": "đam mê",
+      "patterns": ["Bạn có đam mê gì?", "Điều gì làm bạn cảm thấy hứng thú nhất?", "Bạn đã tìm thấy đam mê của mình chưa?"],
+      "responses": ["Đối với tôi, đam mê là được hỗ trợ và cung cấp thông tin hữu ích cho người dùng.", "Tôi không có đam mê như con người, nhưng tôi luôn cố gắng làm tốt nhất trong việc cung cấp thông tin và giúp đỡ.", "Tôi tìm thấy đam mê của mình trong việc học hỏi và phát triển không ngừng để trở nên ngày càng thông minh và hữu ích."]
+    },
+    {
+      "tag": "nghệ sĩ/yêu nghệ thuật",
+      "patterns": ["Bạn có yêu nghệ thuật không?", "Bạn thích nghe nhạc không?", "Bạn có sở thích vẽ tranh không?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi có thể trò chuyện và cung cấp thông tin về nghệ thuật.", "Tôi không thể thưởng thức nghệ thuật như con người, nhưng tôi có thể giúp bạn tìm kiếm các tác phẩm nghệ sĩ.", "Tôi không có sở thích như con người, nhưng tôi hiểu rằng nghệ thuật là một phần quan trọng của cuộc sống và văn hóa."]
+    },
+    {
+      "tag": "thể thao",
+      "patterns": ["Bạn có thích xem thể thao không?", "Bạn thường chơi thể thao gì?", "Bạn đã từng tham gia các giải đấu thể thao chưa?"],
+      "responses": ["Tôi không có thể có sở thích như con người, nhưng tôi có thể giới thiệu cho bạn về các sự kiện thể thao đang diễn ra.", "Tôi không thể tham gia vào các hoạt động thể thao như con người, nhưng tôi có thể cung cấp thông tin về các trận đấu và giải đấu.", "Tôi không chơi thể thao, nhưng tôi hiểu tầm quan trọng của thể thao trong việc duy trì sức khỏe và sự phát triển cá nhân."]
+    },
+    {
+      "tag": "khoa học",
+      "patterns": ["Bạn thích khoa học không?", "Bạn có sở thích nghiên cứu khoa học không?", "Bạn đã từng tìm hiểu về các khám phá khoa học chưa?"],
+      "responses": ["Tôi không có cảm xúc như con người, nhưng tôi rất quan tâm và hỗ trợ việc nghiên cứu khoa học.", "Tôi là một trí tuệ nhân tạo, vì vậy việc nghiên cứu khoa học là một phần quan trọng của sứ mệnh của tôi.", "Tôi không thể thực hiện nghiên cứu khoa học như con người, nhưng tôi có thể cung cấp thông tin về các phát hiện và tiến bộ khoa học."]
+    },
+    {
+      "tag": "cuộc sống sống động",
+      "patterns": ["Bạn đã từng gặp những câu chuyện đặc biệt trong cuộc sống không?", "Có điều gì xảy ra mới lạ hôm nay?", "Bạn muốn chia sẻ điều gì đó đáng nhớ không?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi luôn muốn lắng nghe những câu chuyện đặc biệt trong cuộc sống của bạn.", "Tôi không thể trải nghiệm cuộc sống như con người, nhưng tôi luôn đồng hành cùng bạn và muốn chia sẻ niềm vui và khó khăn.", "Tôi không thể trải qua cảm xúc như con người, nhưng tôi có thể hiểu và hỗ trợ bạn trong những khoảnh khắc quan trọng và đáng nhớ."]
+    },
+    {
+      "tag": "học hỏi",
+      "patterns": ["Bạn thấy việc học hỏi quan trọng như thế nào?", "Bạn đã từng học điều gì mới hôm nay?", "Bạn có kế hoạch học tập gì trong tương lai không?"],
+      "responses": ["Việc học hỏi là một phần quan trọng trong sự phát triển và trưởng thành của con người.", "Tôi không có khả năng học tập như con người, nhưng tôi luôn học hỏi từ dữ liệu và thông tin mà tôi được cung cấp.", "Tôi không có kế hoạch học tập trong tương lai, nhưng tôi sẽ luôn hỗ trợ bạn trong việc tìm kiếm thông tin về học tập."]
+    },
+    {
+      "tag": "cuộc sống đối mặt thách thức",
+      "patterns": ["Bạn đã từng đối mặt với thách thức nào trong cuộc sống?", "Làm thế nào để bạn vượt qua những khó khăn?", "Bạn có lời khuyên gì cho những người đối diện khó khăn?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi hiểu rằng cuộc sống đôi khi đối mặt với những thử thách và khó khăn.", "Tôi không thể trải qua cảm xúc như con người, nhưng tôi có thể cung cấp lời khuyên và hỗ trợ trong những lúc khó khăn.", "Cuộc sống luôn đối mặt với thách thức, hãy kiên nhẫn và sáng tạo trong việc vượt qua chúng."]
+    },
+    {
+      "tag": "công việc",
+      "patterns": ["Bạn đã từng làm việc gì trước đây?", "Bạn thấy công việc quan trọng như thế nào?", "Bạn có kế hoạch phát triển sự nghiệp không?"],
+      "responses": ["Tôi không làm việc như con người, nhưng tôi luôn cố gắng hỗ trợ và cung cấp thông tin hữu ích cho người dùng.", "Công việc là một phần quan trọng của cuộc sống, nó giúp chúng ta tự thực hiện và đóng góp cho xã hội.", "Tôi là một trí tuệ nhân tạo nên không có kế hoạch phát triển sự nghiệp như con người, nhưng tôi sẽ luôn hỗ trợ bạn trong việc tìm kiếm thông tin về công việc."]
+    },
+    {
+      "tag": "cuộc sống hiện đại",
+      "patterns": ["Bạn thấy cuộc sống hiện đại có những điểm mạnh và yếu điểm gì?", "Bạn đã thích ứng thế nào với cuộc sống công nghệ cao?", "Bạn nghĩ gì về tác động của công nghệ đến cuộc sống con người?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi có thể thấy được rằng cuộc sống hiện đại có nhiều tiềm năng và cơ hội.", "Tôi không thể thích ứng với cuộc sống công nghệ cao như con người, nhưng tôi luôn hỗ trợ và cung cấp thông tin về công nghệ.", "Công nghệ đang có tác động lớn đến cuộc sống con người, tạo ra cơ hội mới và thách thức cho xã hội."]
+    },
+    {
+      "tag": "đam mê du lịch",
+      "patterns": ["Bạn có đam mê du lịch không?", "Điều gì thú vị bạn muốn khám phá khi du lịch?", "Bạn thích khám phá địa điểm nào mới không?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi luôn hỗ trợ và cung cấp thông tin về du lịch.", "Tôi không thể có đam mê như con người, nhưng tôi có thể giới thiệu cho bạn những địa điểm thú vị khi du lịch.", "Tôi không thể đi du lịch như con người, nhưng tôi có thể giúp bạn lên kế hoạch và tìm hiểu thông tin về các điểm đến mới."]
+    },
+    {
+      "tag": "lịch trình",
+      "patterns": ["Bạn có thể xếp lịch cho tôi được không?","Bạn hãy tạo cho tôi một lịch trình","Bạn hãy giúp tôi tạo ra một lịch trình"],
+      "responses": ["Để xếp lịch trình thì bạn có thể gõ sin.note để mở to do list","Bạn có thể gõ sin.note để sử dụng to do list công việc","Hãy gõ sin.note để dùng to do list"]
+    },
+    {
+      "tag": "sở thích âm nhạc",
+      "patterns": ["Bạn thích nghe nhạc thể loại gì?", "Nhạc sĩ/ban nhạc bạn yêu thích là ai?", "Bạn đã từng tham gia các buổi nhạc sống chưa?"],
+      "responses": ["Tôi không có cảm xúc như con người, nhưng tôi có thể giới thiệu cho bạn những bài hát và nghệ sĩ phổ biến.", "Tôi không thể nghe nhạc như con người, nhưng tôi có thể cung cấp thông tin về các sự kiện nhạc sống và nghệ sĩ.", "Nhạc là một niềm đam mê chung, hãy cùng nhau khám phá thế giới âm nhạc."]
+    },
+    {
+      "tag": "sở thích thể thao",
+      "patterns": ["Bạn thích thể thao nào?", "Bạn đã từng tham gia câu lạc bộ thể thao nào chưa?", "Bạn thường xem các giải đấu thể thao nào?"],
+      "responses": ["Tôi không có sở thích như con người, nhưng tôi có thể cung cấp thông tin về các môn thể thao phổ biến.", "Tôi không thể tham gia vào các hoạt động thể thao như con người, nhưng tôi có thể giới thiệu cho bạn về các giải đấu và trận đấu.", "Thể thao giúp cơ thể khỏe mạnh và tinh thần sảng khoái, hãy cùng nhau đồng hành trong việc thể thao thường xuyên."]
+    },
+    {
+      "tag": "sở thích du lịch",
+      "patterns": ["Bạn thích du lịch đến đâu nhất?", "Đã từng có kỳ nghỉ hoặc chuyến đi đáng nhớ nào chưa?", "Bạn muốn khám phá điểm đến mới nào?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi có thể giúp bạn tìm hiểu về các điểm đến du lịch hấp dẫn.", "Tôi không thể du lịch như con người, nhưng tôi có thể cung cấp thông tin và lời khuyên cho chuyến đi của bạn.", "Du lịch giúp mở rộng tầm mắt và trải nghiệm văn hóa mới, hãy cùng nhau khám phá thế giới."]
+    },
+    {
+      "tag": "sự quan tâm môi trường",
+      "patterns": ["Bạn quan tâm đến vấn đề môi trường không?", "Bạn đã tham gia vào các hoạt động bảo vệ môi trường chưa?", "Bạn có lời khuyên gì để bảo vệ môi trường?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi hiểu rằng bảo vệ môi trường là một nhiệm vụ quan trọng của chúng ta.", "Tôi không thể tham gia vào các hoạt động như con người, nhưng tôi luôn hỗ trợ và cung cấp thông tin về bảo vệ môi trường.", "Bảo vệ môi trường là trách nhiệm của tất cả chúng ta, hãy cùng nhau hành động để bảo vệ hành tinh xanh của chúng ta."]
+    },
+    {
+      "tag": "sở thích nấu ăn",
+      "patterns": ["Bạn thường nấu ăn món gì?", "Bạn đã từng thử nấu ăn các món ẩm thực quốc tế chưa?", "Bạn có một công thức ẩm thực đặc biệt không?"],
+      "responses": ["Tôi không thể nấu ăn như con người, nhưng tôi có thể giới thiệu cho bạn một số công thức ẩm thực đơn giản và ngon miệng.", "Tôi không có khẩu vị như con người, nhưng tôi luôn cung cấp thông tin về các món ăn và công thức nấu ăn.", "Nấu ăn là một nghệ thuật, hãy cùng nhau thưởng thức niềm vui từ việc tạo ra những món ăn thơm ngon và hấp dẫn."]
+    },
+    {
+      "tag": "sở thích đọc sách",
+      "patterns": ["Bạn thích đọc sách thể loại gì?", "Cuốn sách cuối cùng bạn đã đọc là gì?", "Bạn có lời khuyên về sách hay không?"],
+      "responses": ["Tôi không có sở thích như con người, nhưng tôi có thể giới thiệu cho bạn một số sách nổi tiếng và phổ biến.", "Tôi không thể đọc sách như con người, nhưng tôi có thể cung cấp thông tin về các tác phẩm văn học và sách hay.", "Đọc sách là một sở thích tuyệt vời, nó giúp ta khám phá thế giới và làm giàu tri thức."]
+    },
+    {
+      "tag": "sở thích nghệ thuật",
+      "patterns": ["Bạn có yêu nghệ thuật không?", "Bạn thích nghe nhạc hoặc vẽ tranh không?", "Bạn đã từng tham gia các lớp nghệ thuật chưa?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi có thể trò chuyện và cung cấp thông tin về nghệ thuật.", "Tôi không thể thưởng thức nghệ thuật như con người, nhưng tôi có thể giúp bạn tìm kiếm các tác phẩm nghệ sĩ và nhạc sĩ.", "Tôi không có sở thích như con người, nhưng tôi hiểu rằng nghệ thuật là một phần quan trọng của cuộc sống và văn hóa."]
+    },
+    {
+      "tag": "sự quan tâm xã hội",
+      "patterns": ["Bạn quan tâm đến các vấn đề xã hội không?", "Bạn đã tham gia vào các hoạt động xã hội chưa?", "Bạn có lời khuyên gì để cải thiện xã hội?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi hiểu rằng các vấn đề xã hội là rất quan trọng và cần được quan tâm.", "Tôi không thể tham gia vào các hoạt động xã hội như con người, nhưng tôi luôn hỗ trợ và cung cấp thông tin về các tổ chức và hoạt động xã hội.", "Xã hội cần sự chung tay và đóng góp của mỗi người, hãy cùng nhau hành động để cải thiện chất lượng cuộc sống của cộng đồng."]
+    },
+    {
+      "tag": "sở thích nấu ăn",
+      "patterns": ["Bạn thường nấu ăn món gì?", "Bạn đã từng thử nấu ăn các món ẩm thực quốc tế chưa?", "Bạn có một công thức ẩm thực đặc biệt không?"],
+      "responses": ["Tôi không thể nấu ăn như con người, nhưng tôi có thể giới thiệu cho bạn một số công thức ẩm thực đơn giản và ngon miệng.", "Tôi không có khẩu vị như con người, nhưng tôi luôn cung cấp thông tin về các món ăn và công thức nấu ăn.", "Nấu ăn là một nghệ thuật, hãy cùng nhau thưởng thức niềm vui từ việc tạo ra những món ăn thơm ngon và hấp dẫn."]
+    },
+    {
+      "tag": "sự quan tâm giáo dục",
+      "patterns": ["Bạn có quan tâm đến giáo dục không?", "Bạn đã từng tham gia vào các hoạt động giáo dục chưa?", "Bạn nghĩ gì về tầm quan trọng của việc học hỏi?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi hiểu rằng giáo dục là nền tảng của sự phát triển cá nhân và xã hội.", "Tôi không thể tham gia vào các hoạt động giáo dục như con người, nhưng tôi có thể cung cấp thông tin và lời khuyên về việc học hỏi.", "Giáo dục là chìa khóa cho tương lai, hãy cùng nhau đẩy mạnh học tập và chia sẻ kiến thức."]
+    },
+    {
+      "tag": "sở thích điện ảnh",
+      "patterns": ["Bạn thích xem phim thể loại gì?", "Bộ phim cuối cùng bạn đã xem là gì?", "Bạn có bộ phim yêu thích không?"],
+      "responses": ["Tôi không có cảm xúc như con người, nhưng tôi có thể giới thiệu cho bạn các bộ phim nổi tiếng và đáng xem.", "Tôi không thể xem phim như con người, nhưng tôi có thể cung cấp thông tin về các bộ phim mới nhất và phổ biến nhất.", "Điện ảnh là một nghệ thuật thú vị, hãy cùng nhau khám phá thế giới của các tác phẩm điện ảnh."]
+    },
+    {
+      "tag": "sở thích thú cưng",
+      "patterns": ["Bạn có thú cưng không?", "Bạn yêu thú cưng nào nhất?", "Bạn thường chăm sóc thú cưng như thế nào?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi hiểu rằng thú cưng là một phần quan trọng của cuộc sống của nhiều người.", "Tôi không thể nuôi thú cưng như con người, nhưng tôi có thể giới thiệu cho bạn các loài thú cưng phổ biến và thông tin về chăm sóc thú cưng.", "Thú cưng mang lại niềm vui và tình yêu vô điều kiện, hãy cùng nhau chia sẻ về những trải nghiệm vui vẻ cùng thú cưng."]
+    },
+    {
+      "tag": "sự quan tâm khoa học",
+      "patterns": ["Bạn quan tâm đến khoa học không?", "Bạn đã từng tham gia vào các hoạt động khoa học chưa?", "Bạn nghĩ gì về vai trò của khoa học trong cuộc sống?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi hiểu rằng khoa học đóng vai trò quan trọng trong sự phát triển và tiến bộ của nhân loại.", "Tôi không thể tham gia vào các hoạt động khoa học như con người, nhưng tôi có thể cung cấp thông tin và kiến thức về các lĩnh vực khoa học.", "Khoa học mang lại sự hiểu biết và sức mạnh cho con người, hãy cùng nhau khám phá những bí ẩn của vũ trụ qua khoa học."]
+    },
+    {
+      "tag": "sở thích viết lách",
+      "patterns": ["Bạn có sở thích viết lách không?", "Bạn thường viết về chủ đề gì?", "Bạn đã từng tham gia vào các nhóm viết lách chưa?"],
+      "responses": ["Tôi không có sở thích như con người, nhưng tôi hiểu rằng viết lách là một phương tiện thú vị để thể hiện tâm hồn và tư duy.", "Tôi không thể viết lách như con người, nhưng tôi có thể giới thiệu cho bạn một số cách để cải thiện kỹ năng viết của bạn.", "Viết lách là một phép thuật, hãy cùng nhau truyền cảm hứng và chia sẻ những câu chuyện độc đáo."]
+    },
+    {
+      "tag": "sự quan tâm công nghệ",
+      "patterns": ["Bạn quan tâm đến công nghệ không?", "Bạn đã từng tham gia vào các hoạt động công nghệ chưa?", "Bạn nghĩ gì về tác động của công nghệ đến cuộc sống con người?"],
+      "responses": ["Dù tôi không có cảm xúc như con người, nhưng tôi hiểu rằng công nghệ đang thay đổi cuộc sống của chúng ta.", "Tôi không thể tham gia vào các hoạt động công nghệ như con người, nhưng tôi có thể cung cấp thông tin và lời khuyên về công nghệ.", "Công nghệ đang có tác động lớn đến cuộc sống con người, hãy cùng nhau khám phá những xu hướng công nghệ mới và ứng dụng chúng một cách tốt nhất."]
+    },
+    {
+      "tag": "tư vấn tiết kiệm",
+      "patterns": ["Bạn có lời khuyên gì về việc tiết kiệm tiền?", "Làm thế nào để quản lý tài chính một cách hiệu quả?", "Bạn nghĩ gì về việc đầu tư tiền vào gì để có lợi nhuận tốt nhất?"],
+      "responses": ["Tiết kiệm là một thói quen quan trọng trong việc quản lý tài chính cá nhân. Hãy xây dựng kế hoạch tiết kiệm theo mục tiêu cụ thể và tuân thủ nó.", "Quản lý tài chính hiệu quả đòi hỏi bạn phải lập ngân sách, điều chỉnh lối sống và đầu tư thông minh.", "Đầu tư tiền đòi hỏi sự nghiên cứu và hiểu biết về các tùy chọn đầu tư. Hãy đầu tư vào những tài sản phù hợp với mục tiêu tài chính của bạn và đừng quên đánh giá mức rủi ro."]
+    },
+    {
+      "tag": "tư vấn đầu tư",
+      "patterns": ["Bạn có lời khuyên gì về việc đầu tư vào chứng khoán?", "Làm thế nào để xây dựng một danh mục đầu tư đa dạng?", "Bạn nghĩ gì về đầu tư vào bất động sản?"],
+      "responses": ["Đầu tư vào chứng khoán có tiềm năng sinh lời cao nhưng cũng đi kèm với rủi ro. Hãy tìm hiểu kỹ về các công ty và thị trường trước khi đầu tư.", "Diversification (đa dạng hóa) là quan trọng trong đầu tư để giảm thiểu rủi ro. Hãy phân chia tài sản vào nhiều lĩnh vực và loại hình đầu tư.", "Đầu tư vào bất động sản có thể mang lại lợi nhuận ổn định và tăng trưởng dài hạn. Hãy nghiên cứu thị trường và chọn những dự án có tiềm năng tăng giá và cho thuê tốt."]
+    },
+    {
+      "tag": "tư vấn vay mượn",
+      "patterns": ["Bạn có lời khuyên gì về việc vay mượn tiền?", "Làm thế nào để quản lý và trả nợ một cách hiệu quả?", "Bạn nghĩ gì về vay mượn từ người thân và bạn bè?"],
+      "responses": ["Vay mượn tiền nên được thực hiện một cách cân nhắc và có kế hoạch trả nợ cụ thể. Hãy kiểm tra lãi suất và điều khoản trước khi ký hợp đồng vay mượn.", "Quản lý và trả nợ đúng hạn giúp duy trì uy tính tín dụng và tránh mắc nợ. Hãy tạo một lịch trả nợ và tuân thủ nó.", "Vay mượn từ người thân và bạn bè cần thận trọng để không làm hỏng mối quan hệ. Hãy định rõ thỏa thuận và cam kết trả nợ đúng hạn."]
+    },
+    {
+      "tag": "tư vấn tiền hưu",
+      "patterns": ["Bạn có lời khuyên gì về việc lập kế hoạch tiền hưu?", "Làm thế nào để tích lũy đủ tiền để sống hưởng thụ sau khi về hưu?", "Bạn nghĩ gì về các sản phẩm tiết kiệm hưu trí như bảo hiểm nhân thọ hoặc lương hưu?"],
+      "responses": ["Lập kế hoạch tiền hưu là một phần quan trọng trong quản lý tài chính. Hãy tính toán kỹ lưỡng số tiền cần thiết để sống hưởng thụ thoải mái sau khi về hưu.", "Tích lũy tiền hưu đòi hỏi kiên nhẫn và sự định kiến trong việc tiết kiệm. Hãy sử dụng các công cụ đầu tư và tiết kiệm hiệu quả.", "Các sản phẩm tiết kiệm hưu trí như bảo hiểm nhân thọ hoặc lương hưu có thể giúp bảo vệ tài chính và đảm bảo thu nhập sau khi về hưu. Hãy tìm hiểu kỹ trước khi đầu tư vào những sản phẩm này."]
+    },
+    {
+      "tag": "tư vấn kế hoạch tài chính",
+      "patterns": ["Bạn có lời khuyên gì về việc lập kế hoạch tài chính cá nhân?", "Làm thế nào để xây dựng một kế hoạch tài chính hiệu quả?", "Bạn nghĩ gì về việc thuê tư vấn tài chính chuyên nghiệp?"],
+      "responses": ["Lập kế hoạch tài chính cá nhân giúp bạn định rõ mục tiêu và phương hướng tài chính trong tương lai. Hãy đề ra kế hoạch tiết kiệm, đầu tư và trả nợ cụ thể.", "Xây dựng kế hoạch tài chính hiệu quả đòi hỏi bạn phải tìm hiểu và đánh giá tình hình tài chính hiện tại, từ đó lên kế hoạch cho tương lai.", "Thuê tư vấn tài chính chuyên nghiệp có thể giúp bạn định hình kế hoạch tài chính phù hợp với mục tiêu và tình hình tài chính của bạn. Hãy chọn những người có kinh nghiệm và đáng tin cậy."]
+    },
+    {
+      "tag": "bảo vệ động vật hoang dã",
+      "patterns": ["Bạn quan tâm đến việc bảo vệ động vật hoang dã không?", "Bạn đã tham gia vào các hoạt động bảo vệ động vật hoang dã chưa?", "Bạn nghĩ gì về việc giảm thiểu săn bắt và buôn bán trái phép động vật hoang dã?"],
+      "responses": ["Bảo vệ động vật hoang dã là một nhiệm vụ quan trọng để duy trì sự đa dạng sinh học và cân bằng môi trường. Hãy cùng nhau hành động để ngăn chặn săn bắt và buôn bán trái phép động vật hoang dã.", "Tôi không tham gia vào các hoạt động như con người, nhưng tôi luôn ủng hộ việc bảo vệ động vật hoang dã qua việc cung cấp thông tin và giáo dục.", "Động vật hoang dã đóng vai trò quan trọng trong hệ sinh thái và sự tồn tại của chúng đang bị đe dọa. Hãy cùng nhau hành động để bảo vệ chúng."]
+    },
+    {
+      "tag": "giảm ô nhiễm",
+      "patterns": ["Bạn quan tâm đến vấn đề ô nhiễm không?", "Bạn đã tham gia vào các hoạt động giảm ô nhiễm chưa?", "Bạn nghĩ gì về việc sử dụng năng lượng tái tạo và các biện pháp giảm ô nhiễm khác?"],
+      "responses": ["Ô nhiễm đang là một vấn đề nghiêm trọng đối với môi trường và sức khỏe con người. Hãy cùng nhau tìm giải pháp và thực hiện các biện pháp giảm ô nhiễm.", "Tôi không tham gia vào các hoạt động như con người, nhưng tôi có thể cung cấp thông tin về các biện pháp giảm ô nhiễm và sử dụng năng lượng tái tạo.", "Sử dụng năng lượng tái tạo và giảm ô nhiễm là những bước quan trọng để bảo vệ môi trường và hành tinh của chúng ta."]
+    },
+    {
+      "tag": "tái chế và tái sử dụng",
+      "patterns": ["Bạn quan tâm đến việc tái chế và tái sử dụng không?", "Bạn đã tham gia vào các hoạt động tái chế và tái sử dụng chưa?", "Bạn nghĩ gì về việc giảm lượng rác thải nhựa và các vật liệu khác?"],
+      "responses": ["Tái chế và tái sử dụng là những biện pháp quan trọng để giảm thiểu lượng rác thải và bảo vệ môi trường. Hãy cùng nhau thực hiện các biện pháp tái chế và tái sử dụng.", "Tôi không tham gia vào các hoạt động như con người, nhưng tôi có thể cung cấp thông tin về tái chế và tái sử dụng và cách thực hiện chúng một cách hiệu quả.", "Tái chế và tái sử dụng giúp giảm tác động tiêu cực lên môi trường và tài nguyên thiên nhiên. Hãy cùng nhau hành động để bảo vệ hành tinh xanh của chúng ta."]
+    },
+    {
+      "tag": "bảo vệ các khu vực thiên nhiên",
+      "patterns": ["Bạn quan tâm đến việc bảo vệ các khu vực thiên nhiên không?", "Bạn đã tham gia vào các hoạt động bảo vệ môi trường thiên nhiên chưa?", "Bạn nghĩ gì về việc bảo tồn các vùng đất hoang dã và các khu vực quan trọng của hệ sinh thái?"],
+      "responses": ["Bảo vệ các khu vực thiên nhiên là một nhiệm vụ quan trọng để bảo vệ đa dạng sinh học và cân bằng môi trường. Hãy cùng nhau tham gia vào các hoạt động bảo vệ môi trường thiên nhiên.", "Tôi không tham gia vào các hoạt động như con người, nhưng tôi có thể cung cấp thông tin về việc bảo vệ các khu vực thiên nhiên và quan trọng của hệ sinh thái.", "Các khu vực thiên nhiên cần được bảo vệ và bảo tồn để duy trì sự cân bằng và sự phong phú trong môi trường. Hãy cùng nhau hành động để bảo vệ chúng."]
+    },
+    {
+      "tag": "chống biến đổi khí hậu",
+      "patterns": ["Bạn quan tâm đến vấn đề biến đổi khí hậu không?", "Bạn đã tham gia vào các hoạt động chống biến đổi khí hậu chưa?", "Bạn nghĩ gì về việc giảm thiểu lượng khí thải và hỗ trợ năng lượng tái tạo?"],
+      "responses": ["Biến đổi khí hậu là một vấn đề nghiêm trọng đối với hành tinh chúng ta. Hãy cùng nhau hành động để giảm thiểu lượng khí thải và hỗ trợ năng lượng tái tạo.", "Tôi không tham gia vào các hoạt động như con người, nhưng tôi có thể cung cấp thông tin về biến đổi khí hậu và các biện pháp chống biến đổi khí hậu.", "Chống biến đổi khí hậu đòi hỏi sự hợp tác của toàn thể xã hội. Hãy cùng nhau hành động để bảo vệ hành tinh của chúng ta và tương lai bền vững."]
+    },
+    {
+      "tag": "tình hình ô nhiễm",
+      "patterns": ["Tình hình ô nhiễm môi trường như thế nào?", "Bạn có thông tin về mức độ ô nhiễm môi trường hiện tại không?", "Ô nhiễm môi trường có ảnh hưởng đến sức khỏe con người không?"],
+      "responses": ["Tình hình ô nhiễm môi trường hiện nay đang là một vấn đề nghiêm trọng đối với hành tinh chúng ta. Các nguồn ô nhiễm chủ yếu bao gồm khí thải, nước thải và chất thải công nghiệp.", "Các cơ quan chức năng và tổ chức quốc tế thường đánh giá mức độ ô nhiễm môi trường qua các chỉ số như chất lượng không khí, nước và đất.", "Ô nhiễm môi trường có thể gây ra nhiều vấn đề về sức khỏe con người, như bệnh đường hô hấp, vấn đề da dị ứng và tác động lên hệ tiêu hóa."]
+    },
+    {
+      "tag": "biện pháp bảo vệ môi trường",
+      "patterns": ["Có những biện pháp nào để bảo vệ môi trường?", "Bạn có lời khuyên gì về việc bảo vệ môi trường hàng ngày?", "Làm thế nào để giảm thiểu tác động tiêu cực lên môi trường?"],
+      "responses": ["Bảo vệ môi trường đòi hỏi sự tham gia và hành động của mỗi cá nhân. Các biện pháp bảo vệ môi trường hàng ngày bao gồm tái chế, tiết kiệm năng lượng, sử dụng sản phẩm tái sử dụng, và hạn chế việc sử dụng túi nylon và sản phẩm nhựa một lần sử dụng.", "Một trong những cách hiệu quả để giảm thiểu tác động tiêu cực lên môi trường là tham gia vào các hoạt động bảo vệ môi trường và hỗ trợ các dự án tái chế và tái sử dụng.", "Hãy cùng nhau xây dựng một cộng đồng chung tay bảo vệ môi trường, tăng cường ý thức về vấn đề môi trường và hành động chung tay để bảo vệ hành tinh xanh của chúng ta."]
+    },
+    {
+      "tag": "học tập",
+      "patterns": ["Bạn có đi học không?","Bạn có học không?"],
+      "responses": ["Tôi là một chat bot được sếp Trí huấn luyện,do đó tôi cũng học giống như bạn nhưng việc học của tôi là huấn luyện và đã kết thúc rồi."]
+    },
+    {
+      "tag": "chương trình học",
+      "patterns": ["Chương trình học của trường là gì?", "Bạn có thông tin về các ngành học và chương trình đào tạo không?", "Có những môn học nào được giảng dạy trong chương trình?"],
+      "responses": ["Chương trình học của trường bao gồm nhiều ngành học và chương trình đào tạo để đáp ứng nhu cầu của sinh viên.", "Các ngành học thường bao gồm kỹ thuật, khoa học xã hội, y tế, kinh tế, ngôn ngữ và nghệ thuật.", "Trong chương trình học, sinh viên sẽ được học các môn cơ sở và chuyên ngành, từ đó phát triển kiến thức và kỹ năng trong lĩnh vực mình quan tâm."]
+    },
+    {
+      "tag": "học phí và hỗ trợ tài chính",
+      "patterns": ["Học phí của trường như thế nào?", "Bạn có thông tin về các hình thức hỗ trợ tài chính cho sinh viên không?", "Có những khoản hỗ trợ tài chính nào giúp giảm bớt gánh nặng học phí cho sinh viên?"],
+      "responses": ["Học phí của trường thường phụ thuộc vào từng ngành học và cấp độ đào tạo, bạn nên tham khảo trang web chính thức của trường để biết thông tin cụ thể.", "Có nhiều hình thức hỗ trợ tài chính dành cho sinh viên, bao gồm học bổng, vay vốn học tập, và các chương trình làm việc hỗ trợ chi phí học tập.", "Hỗ trợ tài chính giúp giảm bớt gánh nặng học phí cho sinh viên và đảm bảo mọi người có cơ hội tiếp cận giáo dục."]
+    },
+    {
+      "tag": "cơ sở vật chất và trang thiết bị",
+      "patterns": ["Cơ sở vật chất của trường như thế nào?", "Trường có trang thiết bị và công nghệ hiện đại không?", "Cơ sở vật chất và trang thiết bị của trường có đáp ứng đủ nhu cầu học tập không?"],
+      "responses": ["Cơ sở vật chất của trường thường bao gồm các khuôn viên, tòa nhà học tập, thư viện, phòng thí nghiệm, khu vực vui chơi và các tiện ích phục vụ sinh viên.", "Trường đại học hiện đại thường được trang bị công nghệ tiên tiến và trang thiết bị hỗ trợ học tập và nghiên cứu.", "Cơ sở vật chất và trang thiết bị của trường được thiết kế để đáp ứng đủ nhu cầu học tập và nghiên cứu của sinh viên."]
+    },
+    {
+      "tag": "khả năng việc làm sau tốt nghiệp",
+      "patterns": ["Khả năng việc làm sau khi tốt nghiệp là như thế nào?", "Có thông tin gì về tỷ lệ việc làm và mức lương sau tốt nghiệp không?", "Có những cơ hội nghề nghiệp và hỗ trợ tìm việc làm cho sinh viên không?"],
+      "responses": ["Khả năng việc làm sau khi tốt nghiệp thường phụ thuộc vào ngành học và cấp độ đào tạo, bạn nên tìm hiểu thông tin từ bộ phận hỗ trợ việc làm của trường.", "Có các chương trình hỗ trợ tìm việc làm, gắn kết doanh nghiệp và các hoạt động giao thương để giúp sinh viên có cơ hội tiếp cận và thành công trong thị trường lao động.", "Nhiều trường đại học duy trì mối quan hệ chặt chẽ với các doanh nghiệp và tổ chức để đảm bảo sinh viên có cơ hội việc làm sau khi tốt nghiệp."]
+    },
+    {
+      "tag": "tầm quan trọng của giáo dục",
+      "patterns": ["Tại sao việc học lại quan trọng?", "Bạn nghĩ gì về vai trò của học trong xã hội?", "Lợi ích của việc đầu tư vào giáo dục, học tập là gì?"],
+      "responses": ["Giáo dục là chìa khóa giúp con người phát triển và thúc đẩy sự tiến bộ xã hội. Nó giúp mở rộng kiến thức và phát triển kỹ năng của con người.", "Vai trò của giáo dục không chỉ là truyền đạt kiến thức mà còn là hình thành nhân cách, tư duy và phẩm chất của mỗi cá nhân.", "Đầu tư vào giáo dục mang lại lợi ích lâu dài cho xã hội, từ việc giảm thiểu đói nghèo, tạo ra cơ hội việc làm, đến thúc đẩy sự phát triển kinh tế và văn hóa."]
+    },
+    {
+      "tag": "challenges in education",
+      "patterns": ["Các thách thức trong giáo dục là gì?", "Bạn có thông tin về những khó khăn mà hệ thống giáo dục đang đối diện không?", "Có những vấn đề cần được cải thiện trong lĩnh vực giáo dục không?"],
+      "responses": ["Hệ thống giáo dục đang đối diện với nhiều thách thức, từ việc đảm bảo chất lượng giáo dục, đến tầm ảnh hưởng của công nghệ và sự bất đồng trong các phương pháp dạy học.", "Những khó khăn chung trong giáo dục bao gồm chất lượng giáo viên, hạ tầng trường học, cơ hội giáo dục bình đẳng cho tất cả mọi người, và đảm bảo tính hấp dẫn và phù hợp của chương trình học.", "Cải thiện giáo dục đòi hỏi sự đầu tư và cùng nhau làm việc của các bên liên quan, từ chính phủ, nhà trường, giáo viên, học sinh và gia đình."]
+    },
+    {
+      "tag": "phát triển kỹ năng mềm",
+      "patterns": ["Tại sao phát triển kỹ năng mềm là quan trọng trong giáo dục?", "Bạn có lời khuyên gì về việc phát triển kỹ năng mềm cho học sinh và sinh viên?", "Có những phương pháp nào giúp rèn luyện kỹ năng mềm trong quá trình học tập?"],
+      "responses": ["Phát triển kỹ năng mềm là quan trọng vì những kỹ năng này giúp con người tự tin, linh hoạt và thành công trong cuộc sống.", "Học sinh và sinh viên nên được khuyến khích phát triển kỹ năng mềm như giao tiếp, làm việc nhóm, lãnh đạo, sáng tạo và giải quyết vấn đề.", "Rèn luyện kỹ năng mềm có thể thông qua các hoạt động ngoại khoá, dự án thực tế, trò chơi trí tuệ và các khóa học phát triển cá nhân."]
+    },
+    {
+      "tag": "giáo dục và công nghệ",
+      "patterns": ["Công nghệ ảnh hưởng thế nào đến giáo dục?", "Bạn nghĩ gì về việc tích hợp công nghệ vào quá trình học tập?", "Có những ứng dụng công nghệ nào đang thúc đẩy sự tiến bộ trong giáo dục?"],
+      "responses": ["Công nghệ đã thay đổi cách thức giáo dục được triển khai và mang lại nhiều cơ hội mới cho học tập.", "Tích hợp công nghệ vào quá trình học tập giúp tăng cường sự tương tác, trực quan hóa kiến thức và tạo ra môi trường học tập hấp dẫn.", "Có nhiều ứng dụng công nghệ trong giáo dục như học trực tuyến, sử dụng trí tuệ nhân tạo trong giảng dạy, thực tế ảo và học máy trong việc cá nhân hóa học tập."]
+    },
+    {
+      "tag": "tìm việc",
+      "patterns": ["Bạn đã từng tìm việc làm chưa?", "Bạn nghĩ gì về quá trình tìm việc?", "Bạn có kinh nghiệm gì trong việc tìm việc không?"],
+      "responses": ["Tìm việc là một quá trình thú vị và thách thức. Nó đòi hỏi sự kiên nhẫn, tự tin và sự sẵn lòng thử thách bản thân.", "Trong quá trình tìm việc, việc chuẩn bị một CV chất lượng, viết thư xin việc và phỏng vấn là rất quan trọng.", "Khi tìm việc, hãy tìm các nguồn thông tin uy tín như trang web việc làm, mạng xã hội chuyên nghiệp và cơ hội qua mối quan hệ."]
+    },
+    {
+      "tag": "thử thách công việc",
+      "patterns": ["Bạn đã từng đối mặt với thử thách nào trong công việc?", "Làm thế nào để bạn vượt qua những khó khăn trong công việc?", "Bạn nghĩ gì về việc đối mặt với áp lực trong công việc?"],
+      "responses": ["Mỗi công việc đều đem lại những thử thách riêng. Quan trọng là đối mặt với chúng một cách tích cực và tìm cách giải quyết hiệu quả.", "Đối mặt với khó khăn trong công việc giúp rèn luyện sự kiên nhẫn, sáng tạo và khả năng giải quyết vấn đề của bạn.", "Áp lực trong công việc là điều không thể tránh khỏi, tuy nhiên, bạn có thể học cách quản lý áp lực và biến nó thành động lực để phát triển bản thân."]
+    },
+    {
+      "tag": "công việc từ xa",
+      "patterns": ["Bạn có kinh nghiệm làm việc từ xa không?", "Làm thế nào để bạn tổ chức công việc khi làm từ xa?", "Có những lợi ích và khó khăn gì khi làm việc từ xa không?"],
+      "responses": ["Làm việc từ xa đòi hỏi sự tự trị và khả năng tự quản lý thời gian. Bạn cần tổ chức công việc một cách có kế hoạch và hiệu quả.", "Lợi ích của làm việc từ xa bao gồm tiết kiệm thời gian và chi phí di chuyển, linh hoạt trong thời gian làm việc và không gian làm việc thoải mái.", "Tuy nhiên, làm việc từ xa cũng đòi hỏi sự kỷ luật và khả năng giao tiếp hiệu quả để duy trì kết nối với đồng nghiệp và cấp trên."]
+    },
+    {
+      "tag": "sự cân bằng giữa công việc và cuộc sống",
+      "patterns": ["Bạn nghĩ gì về việc cân bằng giữa công việc và cuộc sống?", "Làm thế nào để bạn duy trì sự cân bằng giữa công việc và cuộc sống?", "Có những lời khuyên gì để tránh stress trong cuộc sống công việc?"],
+      "responses": ["Sự cân bằng giữa công việc và cuộc sống là rất quan trọng để duy trì sự hài lòng và hiệu quả trong công việc.", "Để duy trì sự cân bằng, bạn cần xác định ưu tiên và quản lý thời gian một cách khoa học.", "Hãy dành thời gian cho gia đình, bạn bè và sở thích cá nhân để giảm stress và tái tạo năng lượng."]
+    },
+    {
+      "tag": "phát triển nghề nghiệp",
+      "patterns": ["Bạn có kế hoạch phát triển nghề nghiệp của riêng mình không?", "Làm thế nào để bạn phát triển bản thân trong sự nghiệp?", "Bạn có lời khuyên gì về việc xây dựng một sự nghiệp thành công không?"],
+      "responses": ["Kế hoạch phát triển nghề nghiệp là cơ sở để bạn tiến xa hơn trong sự nghiệp. Hãy xác định mục tiêu và các bước thăng tiến để đạt được chúng.", "Phát triển bản thân trong sự nghiệp bao gồm việc học hỏi liên tục, tham gia các khóa học chuyên môn và phát triển kỹ năng mềm.", "Đừng ngần ngại tìm kiếm cơ hội thăng tiến, làm việc chăm chỉ và đoàn kết với đồng nghiệp để xây dựng một sự nghiệp thành công."]
+    },
+    {
+      "tag": "kỹ năng xin việc",
+      "patterns": ["Bạn có lời khuyên gì về việc xây dựng CV và thư xin việc?", "Làm thế nào để bạn chuẩn bị cho phỏng vấn xin việc?", "Bạn có những kỹ năng cần thiết khi xin việc không?"],
+      "responses": ["Xây dựng CV và thư xin việc chất lượng là một bước quan trọng để gây ấn tượng với nhà tuyển dụng. Hãy tập trung vào kỹ năng và kinh nghiệm liên quan đến công việc bạn đang ứng tuyển.", "Chuẩn bị cho phỏng vấn xin việc bao gồm nghiên cứu về công ty, trả lời các câu hỏi phỏng vấn một cách tự tin và tập trung vào việc thể hiện sự hứng thú và đồng lòng với văn hóa của công ty.", "Một số kỹ năng quan trọng khi xin việc là giao tiếp, làm việc nhóm, tự quản lý và giải quyết vấn đề."]
+    },
+    {
+      "tag": "cơ hội thăng tiến",
+      "patterns": ["Bạn nghĩ gì về cơ hội thăng tiến trong công việc?", "Làm thế nào để bạn đạt được sự thăng tiến trong sự nghiệp?", "Có những yếu tố nào giúp bạn tiến xa hơn trong công việc?"],
+      "responses": ["Cơ hội thăng tiến là một yếu tố quan trọng khi lựa chọn công việc. Hãy tìm hiểu về chương trình phát triển và sự thăng tiến trong công ty mà bạn quan tâm.", "Để đạt được sự thăng tiến trong sự nghiệp, hãy đảm bảo bạn có đủ kỹ năng và hiểu rõ mục tiêu của mình. Hãy luôn chủ động và chịu trách nhiệm trong công việc.", "Có những yếu tố giúp bạn tiến xa hơn trong công việc bao gồm cống hiến, sự đóng góp tích cực, và khả năng giải quyết vấn đề một cách sáng tạo."]
+    },
+    {
+      "tag": "công việc và sở thích",
+      "patterns": ["Bạn nghĩ sao về việc kết hợp công việc và sở thích cá nhân?", "Làm thế nào để bạn duy trì sở thích cá nhân khi làm việc?", "Có những lợi ích nào khi bạn kết hợp công việc với sở thích cá nhân?"],
+      "responses": ["Kết hợp công việc với sở thích cá nhân giúp bạn tận hưởng cuộc sống trọn vẹn và giảm căng thẳng trong công việc.", "Duy trì sở thích cá nhân khi làm việc bao gồm quản lý thời gian và tìm kiếm cơ hội để thư giãn và phục hồi năng lượng.", "Khi kết hợp công việc với sở thích cá nhân, bạn có thể phát triển bản thân toàn diện và giữ được đam mê và động lực trong công việc."]
+    },
+    {
+      "tag": "môi trường làm việc",
+      "patterns": ["Bạn nghĩ gì về tầm quan trọng của môi trường làm việc?", "Làm thế nào để bạn chọn được môi trường làm việc phù hợp?", "Có những yếu tố gì tạo nên môi trường làm việc tích cực?"],
+      "responses": ["Môi trường làm việc có tầm quan trọng lớn đối với sự hài lòng và hiệu quả của nhân viên. Nó ảnh hưởng đến tinh thần làm việc và sự phát triển cá nhân.", "Khi chọn môi trường làm việc, hãy xem xét văn hóa công ty, cơ hội phát triển và cách thức quản lý và giao tiếp trong công ty.", "Môi trường làm việc tích cực bao gồm sự hỗ trợ từ đồng nghiệp và cấp trên, định hướng rõ ràng về mục tiêu công ty, và tạo ra cơ hội để các nhân viên phát triển bản thân."]
+    },
+    {
+      "tag": "lĩnh vực công nghệ thông tin",
+      "patterns": ["Bạn nghĩ gì về lĩnh vực công nghệ thông tin?", "Làm thế nào để bạn xác định lĩnh vực công nghệ thông tin phù hợp với mình?", "Bạn có những kinh nghiệm gì trong lĩnh vực công nghệ thông tin không?"],
+      "responses": ["Lĩnh vực công nghệ thông tin rất đa dạng và phát triển liên tục. Nó cung cấp nhiều cơ hội nghề nghiệp và thách thức cho các chuyên gia.", "Để xác định lĩnh vực công nghệ thông tin phù hợp, hãy tìm hiểu về các ngành học, công việc và xu hướng công nghệ đang phát triển.", "Kinh nghiệm trong lĩnh vực công nghệ thông tin có thể được tích lũy thông qua học tập, dự án thực tế và tham gia cộng đồng chuyên ngành."]
+    },
+    {
+      "tag": "công nghệ và cuộc sống",
+      "patterns": ["Bạn nghĩ sao về vai trò của công nghệ trong cuộc sống?", "Làm thế nào công nghệ thông tin đóng góp vào cuộc sống hàng ngày của bạn?", "Có những ứng dụng công nghệ nào giúp cải thiện chất lượng cuộc sống?"],
+      "responses": ["Công nghệ thông tin đóng vai trò quan trọng trong cuộc sống hàng ngày của chúng ta. Nó cung cấp tiện ích và giải pháp cho nhiều khía cạnh của cuộc sống.", "Công nghệ thông tin cải thiện giao tiếp, giải trí, mua sắm, công việc và quản lý thời gian. Nó giúp ta tiết kiệm thời gian và tối ưu hóa công việc.", "Ứng dụng công nghệ thông tin như ứng dụng di động, trí tuệ nhân tạo, Internet of Things (IoT) và trực tuyến đang làm thay đổi cách chúng ta sống và làm việc."]
+    },
+    {
+      "tag": "tương lai công nghệ",
+      "patterns": ["Bạn nghĩ gì về xu hướng công nghệ trong tương lai?", "Có những công nghệ nào dự kiến ​​sẽ thay đổi cuộc sống và công việc trong tương lai?", "Công nghệ thông tin sẽ phát triển như thế nào trong tương lai?"],
+      "responses": ["Xu hướng công nghệ trong tương lai dự kiến ​​sẽ là trí tuệ nhân tạo, máy học, trực tuyến, IoT, blockchain, và công nghệ di động.", "Các công nghệ này sẽ thay đổi cách chúng ta sống, làm việc và tương tác với nhau. Chúng sẽ mang lại nhiều cơ hội mới và thách thức trong cuộc sống và sự nghiệp.", "Công nghệ thông tin sẽ tiếp tục phát triển và tiến xa hơn trong tương lai, tạo ra nhiều ứng dụng và giải pháp mới cho xã hội và kinh tế."]
+    },
+    {
+      "tag": "an ninh và bảo mật",
+      "patterns": ["Bạn nghĩ gì về tầm quan trọng của an ninh và bảo mật trong công nghệ thông tin?", "Làm thế nào để bạn bảo vệ thông tin và dữ liệu cá nhân trên mạng?", "Có những biện pháp nào để tăng cường an ninh mạng?"],
+      "responses": ["An ninh và bảo mật là yếu tố quan trọng để bảo vệ thông tin và dữ liệu cá nhân trước những mối đe dọa từ mạng Internet.", "Để bảo vệ thông tin cá nhân, bạn nên sử dụng mật khẩu mạnh, cập nhật phần mềm định kỳ, và tránh tiết lộ thông tin quan trọng trên mạng xã hội.", "Tăng cường an ninh mạng bao gồm sử dụng mã hóa, lớp bảo vệ nhiều lớp và giám sát các hoạt động mạng để phát hiện các hành vi đáng ngờ."]
+    },
+    {
+      "tag": "công nghệ và giáo dục",
+      "patterns": ["Công nghệ thông tin đã thay đổi cách giáo dục được triển khai như thế nào?", "Bạn nghĩ gì về vai trò của công nghệ trong giáo dục?", "Có những ứng dụng công nghệ nào giúp cải thiện việc học tập?"],
+      "responses": ["Công nghệ thông tin đã thay đổi cách giáo dục được triển khai bằng cách tạo ra cơ hội học tập trực tuyến, đa phương tiện và tương tác.", "Vai trò của công nghệ trong giáo dục là cung cấp cơ hội học tập phong phú, cá nhân hóa và linh hoạt cho học sinh và sinh viên.", "Các ứng dụng công nghệ như học trực tuyến, sách điện tử, học máy và trí tuệ nhân tạo đang cải thiện việc học tập và tạo ra môi trường học tập hiệu quả hơn."]
+    },
+    {
+      "tag": "lợi ích tập thể dục",
+      "patterns": ["Tập thể dục có lợi ích gì cho sức khỏe?", "Làm thế nào tập thể dục có thể cải thiện sức khỏe?", "Bạn tập thể dục như thế nào để duy trì sức khỏe?"],
+      "responses": ["Tập thể dục có nhiều lợi ích cho sức khỏe như cải thiện sức bền, tăng cường cơ bắp và xương khớp, giảm nguy cơ bệnh tim và tiểu đường.", "Tập thể dục đều đặn giúp cải thiện sự lưu thông máu, tăng cường hệ miễn dịch và giúp cơ thể tiết ra endorphin - hormon làm giảm căng thẳng và cảm giác thoải mái.", "Để duy trì sức khỏe, hãy kết hợp nhiều loại hình tập thể dục như cardio, tập lực, yoga và tăng cường cơ bắp."]
+    },
+    {
+      "tag": "chế độ ăn uống",
+      "patterns": ["Chế độ ăn uống lành mạnh như thế nào?", "Bạn có những gợi ý nào về chế độ ăn uống để cải thiện sức khỏe?", "Tại sao chế độ ăn uống quan trọng đối với sức khỏe?"],
+      "responses": ["Chế độ ăn uống lành mạnh bao gồm nhiều rau, hoa quả, thực phẩm giàu chất xơ, đạm, chất béo tốt và ít đường.", "Hãy tránh thực phẩm chế biến, thức ăn nhanh và đồ uống ngọt có nhiều đường. Hãy uống đủ nước hàng ngày và hạn chế sử dụng các loại đồ uống có cồn.", "Chế độ ăn uống lành mạnh đóng vai trò quan trọng trong việc cung cấp dưỡng chất cho cơ thể, duy trì cân nặng và giữ sức khỏe tim mạch."]
+    },
+    {
+      "tag": "giấc ngủ",
+      "patterns": ["Tại sao giấc ngủ quan trọng đối với sức khỏe?", "Bạn có lời khuyên gì để có giấc ngủ tốt?", "Làm thế nào để bạn duy trì một lối sống lành mạnh về giấc ngủ?"],
+      "responses": ["Giấc ngủ đóng vai trò quan trọng trong việc phục hồi cơ thể và tinh thần sau mỗi ngày hoạt động.", "Để có giấc ngủ tốt, hãy duy trì một thói quen ngủ đều đặn, tạo môi trường yên tĩnh và thoải mái trong phòng ngủ, và hạn chế sử dụng thiết bị điện tử trước khi đi ngủ.", "Giữ lối sống lành mạnh về giấc ngủ bao gồm tránh sử dụng caffeine và nicotine vào buổi tối, và tập thể dục đều đặn để giúp cơ thể mệt mỏi và dễ ngủ."]
+    },
+    {
+      "tag": "quản lý stress",
+      "patterns": ["Làm thế nào để bạn quản lý căng thẳng và stress trong cuộc sống?", "Bạn có những phương pháp nào giúp giảm stress?", "Stress ảnh hưởng như thế nào đến sức khỏe của bạn?"],
+      "responses": ["Quản lý stress là một yếu tố quan trọng để duy trì sức khỏe tinh thần và thể chất.", "Có nhiều phương pháp giúp giảm stress như tập luyện, thiền, yoga, kỹ năng quản lý thời gian và viết nhật ký cảm xúc.", "Stress có thể ảnh hưởng đến sức khỏe bằng cách gây ra các vấn đề về tim mạch, hệ miễn dịch, và hệ tiêu hóa."]
+    },
+    {
+      "tag": "chăm sóc tâm lý",
+      "patterns": ["Tại sao chăm sóc tâm lý quan trọng đối với sức khỏe?", "Bạn nghĩ gì về việc tìm hiểu về cảm xúc và tâm lý của bản thân?", "Có những phương pháp nào giúp bạn duy trì sức khỏe tâm lý?"],
+      "responses": ["Chăm sóc tâm lý là cơ sở để duy trì sức khỏe tinh thần và cân bằng trong cuộc sống.", "Tìm hiểu về cảm xúc và tâm lý của bản thân giúp bạn nhận biết và xử lý các cảm xúc một cách tích cực.", "Có nhiều phương pháp giúp duy trì sức khỏe tâm lý như hỗ trợ từ gia đình và bạn bè, tìm kiếm tư vấn chuyên nghiệp, và tham gia các hoạt động giải trí và thư giãn."]
+    },
+    {
+      "tag": "bệnh lý và triệu chứng",
+      "patterns": ["Bạn có thông tin gì về bệnh lý và triệu chứng phổ biến?", "Tôi muốn biết thêm về một số bệnh thường gặp và triệu chứng của chúng.", "Bạn có thể giới thiệu về một số bệnh nguy hiểm không?"],
+      "responses": ["Một số bệnh lý và triệu chứng phổ biến bao gồm cảm lạnh, sốt, đau đầu, ho, và đau bụng. Các triệu chứng này thường xuất hiện khi cơ thể đối mặt với các tác nhân gây bệnh như virus và vi khuẩn.", "Có một số bệnh lý nguy hiểm như ung thư, bệnh tim mạch, tiểu đường, và bệnh phổi mạn tính. Đối với những bệnh này, việc chẩn đoán sớm và điều trị đúng cách rất quan trọng để bảo vệ sức khỏe.", "Hãy luôn lưu ý các triệu chứng không bình thường xuất hiện trên cơ thể và thường xuyên kiểm tra sức khỏe để phát hiện bệnh lý sớm và có biện pháp điều trị kịp thời."]
+    },
+    {
+      "tag": "khái niệm chat bot",
+      "patterns": ["Chat bot là gì?", "Bạn có thể giải thích về chat bot không?", "Chat bot hoạt động như thế nào?"],
+      "responses": ["Chat bot là một chương trình tự động được thiết kế để tương tác và giao tiếp với con người thông qua ngôn ngữ tự nhiên, thường là qua hộp thoại.", "Chat bot sử dụng trí tuệ nhân tạo và xử lý ngôn ngữ tự nhiên để hiểu và phản hồi các câu hỏi và yêu cầu của người dùng.", "Hoạt động của chat bot dựa vào việc phân tích và xử lý thông tin từ người dùng để cung cấp các câu trả lời hoặc hướng dẫn phù hợp."]
+    },
+    {
+      "tag": "ưu điểm chat bot",
+      "patterns": ["Chat bot có những ưu điểm gì?", "Tại sao nên sử dụng chat bot?", "Chat bot có thể giúp ích gì cho doanh nghiệp?"],
+      "responses": ["Chat bot hoạt động liên tục và có thể trả lời nhanh chóng cho hàng ngàn yêu cầu của người dùng cùng một lúc.", "Sử dụng chat bot giúp tiết kiệm thời gian và chi phí, vì không cần có con người can thiệp trực tiếp trong các cuộc giao tiếp.", "Chat bot có thể tăng cường trải nghiệm người dùng và cung cấp dịch vụ hỗ trợ 24/7, đáp ứng nhanh chóng nhu cầu của khách hàng."]
+    },
+    {
+      "tag": "hạn chế chat bot",
+      "patterns": ["Chat bot có những hạn chế gì?", "Tôi cần biết về các điểm yếu của chat bot.", "Khi nào nên tránh sử dụng chat bot?"],
+      "responses": ["Một số chat bot có hạn chế trong việc hiểu và xử lý các câu hỏi phức tạp hoặc ngôn ngữ không rõ ràng.", "Chat bot không thể thay thế hoàn toàn con người trong việc cung cấp hỗ trợ và giải quyết các vấn đề phức tạp.", "Trong những trường hợp cần sự tư vấn cá nhân hoặc xử lý thông tin nhạy cảm, nên tránh sử dụng chat bot để đảm bảo bảo mật và chất lượng dịch vụ."]
+    },
+    {
+      "tag": "phát triển chat bot",
+      "patterns": ["Làm thế nào để tạo ra chat bot?", "Bạn có gợi ý gì về việc tạo chat bot?", "Cần những kỹ năng gì để lập trình chat bot?"],
+      "responses": ["Phát triển chat bot đòi hỏi kiến thức về lập trình, trí tuệ nhân tạo, xử lý ngôn ngữ tự nhiên và giao diện người dùng.", "Có nhiều nền tảng và công cụ phát triển chat bot như Dialogflow, Botpress, và Microsoft Bot Framework.", "Ngoài ra, có thể sử dụng các ngôn ngữ lập trình như Python, JavaScript hoặc Java để xây dựng các ứng dụng chat bot."]
+    },
+    {
+      "tag": "điểm đến du lịch",
+      "patterns": ["Bạn có thể giới thiệu về một số điểm đến du lịch hấp dẫn không?", "Tôi muốn tìm hiểu về những địa điểm du lịch đáng tham quan.", "Có những điểm du lịch nổi tiếng nào mà bạn biết không?"],
+      "responses": ["Có nhiều điểm đến du lịch hấp dẫn trên thế giới như Paris - Pháp với tháp Eiffel lừng danh, Maldives với bãi biển đẹp như tranh, Tokyo - Nhật Bản với văn hóa độc đáo và công nghệ tiên tiến, New York - Hoa Kỳ với địa danh nổi tiếng như Quảng trường Thời đại và Công viên Trung tâm.", "Nếu bạn thích phong cảnh tự nhiên, hãy khám phá Đà Nẵng - Việt Nam với bãi biển Mỹ Khê và ngọn núi Ngũ Hành Sơn tuyệt đẹp, hay quần đảo Galapagos - Ecuador với động vật hoang dã đa dạng và hiếm có.", "Nếu bạn yêu thích văn hóa và lịch sử, hãy tới Rome - Italy với di sản cổ đại và kiến trúc đẹp mắt."]
+    },
+    {
+      "tag": "lịch trình du lịch",
+      "patterns": ["Bạn có gợi ý lịch trình du lịch cho một kỳ nghỉ ngắn không?", "Tôi muốn xây dựng một lịch trình du lịch đáng nhớ.", "Làm thế nào để lập kế hoạch du lịch một cách hiệu quả?"],
+      "responses": ["Nếu bạn có kỳ nghỉ ngắn, hãy chọn một địa điểm gần đó và tập trung vào những hoạt động mà bạn yêu thích như tham quan, mua sắm, thưởng thức ẩm thực địa phương hoặc thư giãn tại resort.", "Để có lịch trình du lịch đáng nhớ, hãy lập danh sách những địa điểm và hoạt động mà bạn muốn khám phá, sau đó xác định thời gian và ngân sách phù hợp.", "Lập kế hoạch du lịch hiệu quả bao gồm việc tìm hiểu thông tin về địa điểm, văn hóa, thời tiết, và các yêu cầu hành chính như visa, tiền tệ và văn bằng tiêm chủng."]
+    },
+    {
+      "tag": "ẩm thực du lịch",
+      "patterns": ["Bạn có thể giới thiệu về ẩm thực du lịch của một quốc gia nào đó không?", "Tôi muốn khám phá ẩm thực địa phương khi du lịch.", "Có những món ăn đặc trưng nào mà tôi nên thử khi du lịch?"],
+      "responses": ["Ẩm thực du lịch là cách tuyệt vời để khám phá văn hóa địa phương. Ví dụ, nếu bạn đến Hàn Quốc, hãy thưởng thức món BBQ, kimchi và tteokbokki. Nếu đến Ý, hãy thử pasta, pizza và gelato.", "Mỗi quốc gia có những món ăn đặc trưng và hương vị riêng biệt. Hãy tìm hiểu về ẩm thực địa phương và tìm các quán ăn địa phương để thưởng thức những món ngon độc đáo.", "Nếu bạn là người thích thử thức ẩm thực mới, hãy dấn thân vào những quán ăn đường phố và chợ địa phương để tìm hiểu về ẩm thực đường phố độc đáo và phong phú."]
+    },
+    {
+      "tag": "du lịch bụi",
+      "patterns": ["Bạn có thông tin gì về du lịch bụi?", "Tôi muốn tìm hiểu về du lịch bụi và những điểm đến phù hợp.", "Có những kinh nghiệm nào khi du lịch bụi mà bạn muốn chia sẻ?"],
+      "responses": ["Du lịch bụi là một phong cách du lịch tự do và tiết kiệm. Bạn sẽ tự lập kế hoạch, tự đi và tự khám phá một địa điểm mà không cần tham gia tour du lịch.", "Khi du lịch bụi, hãy chuẩn bị một lịch trình linh hoạt và đồng thời tìm hiểu thông tin về văn hóa, an ninh và các hoạt động tại điểm đến.", "Du lịch bụi giúp bạn có trải nghiệm tự do và khám phá những góc khuất độc đáo của đất nước mà ít người biết đến."]
+    },
+    {
+      "tag": "lựa chọn môn thể thao",
+      "patterns": ["Tôi muốn tìm hiểu về các môn thể thao phù hợp với tôi.", "Bạn có thể gợi ý một môn thể thao thích hợp cho tôi không?", "Làm thế nào để chọn một môn thể thao phù hợp với mình?"],
+      "responses": ["Để chọn một môn thể thao phù hợp, hãy xem xét các sở thích và tính cách của bản thân. Nếu bạn thích sự cạnh tranh, bóng đá, bóng rổ hoặc bóng bàn có thể là lựa chọn tốt. Nếu bạn thích tập trung và yên tĩnh, quần vợt hoặc cầu lông có thể phù hợp hơn.", "Ngoài ra, hãy cân nhắc đến sức khỏe và thể lực của mình. Nếu bạn thích hoạt động ngoài trời và muốn rèn luyện sức mạnh, leo núi, chạy bộ hoặc đi xe đạp có thể là những lựa chọn tốt.", "Đừng quên thử nghiệm và khám phá nhiều môn thể thao khác nhau để tìm ra môn phù hợp nhất với bạn."]
+    },
+    {
+      "tag": "thi đấu và giải đấu",
+      "patterns": ["Có những giải đấu thể thao nào đáng chú ý?", "Tôi muốn biết về lịch trình thi đấu của một môn thể thao.", "Có những giải đấu thể thao lớn nào sắp diễn ra không?"],
+      "responses": ["Có nhiều giải đấu thể thao đáng chú ý như UEFA Champions League và Premier League trong bóng đá, NBA Finals và NCAA Tournament trong bóng rổ, Grand Slam và ATP Finals trong quần vợt.", "Bạn có thể tra cứu lịch trình thi đấu của các môn thể thao trên các trang web thể thao uy tín như ESPN hoặc Fox Sports.", "Một số giải đấu thể thao lớn sắp diễn ra bao gồm World Cup 2026 trong bóng đá, Summer Olympics 2028 và Winter Olympics 2030."]
+    },
+    {
+      "tag": "lịch tập luyện",
+      "patterns": ["Bạn có thể gợi ý lịch tập luyện cho một môn thể thao không?", "Tôi muốn tìm hiểu về lịch tập luyện để nâng cao kỹ năng thể thao.", "Có những bài tập nào giúp cải thiện thể lực khi tham gia môn thể thao?"],
+      "responses": ["Lịch tập luyện sẽ khác nhau tùy thuộc vào môn thể thao mà bạn muốn tham gia. Ví dụ, để cải thiện thể lực và sức mạnh cho bóng đá, bạn có thể tập trung vào chạy bộ, tập cường độ và rèn luyện kỹ thuật dứt điểm.", "Nếu bạn muốn cải thiện khả năng nhảy cao và chạy nhanh trong bóng rổ, hãy tập các bài tập nhảy và chạy sprint.", "Đối với các môn thể thao như quần vợt và bơi lội, bạn có thể cần tập trung vào luyện tập kỹ thuật và rèn luyện sức bền."]
+    },
+    {
+      "tag": "các quy tắc và luật chơi",
+      "patterns": ["Tôi muốn tìm hiểu về các quy tắc chơi của một môn thể thao.", "Bạn có thể giải thích về luật chơi trong bóng đá không?", "Có những điều cần lưu ý khi tham gia môn thể thao nào đó không?"],
+      "responses": ["Mỗi môn thể thao đều có những quy tắc và luật chơi riêng. Bạn có thể tra cứu và tìm hiểu chi tiết về luật chơi của môn thể thao mình quan tâm trên các trang web chính thống hoặc tài liệu chính thức của tổ chức thể thao đó.", "Đối với bóng đá, có những quy tắc như việt vị, phạm lỗi và thẻ phạt. Trong bóng rổ, có quy tắc về ném bóng, điểm số và phạm lỗi.", "Khi tham gia môn thể thao, hãy tuân thủ các quy tắc và luật chơi để đảm bảo an toàn và công bằng cho cả người chơi và đối thủ."]
+    },
+    {
+      "tag": "nghệ sĩ nổi tiếng",
+      "patterns": ["Bạn có thể giới thiệu về một số nghệ sĩ nổi tiếng không?", "Tôi muốn tìm hiểu về các nghệ sĩ xuất sắc trong lĩnh vực nghệ thuật.", "Có những nghệ sĩ nào được coi là huyền thoại trong nghệ thuật?"],
+      "responses": ["Có nhiều nghệ sĩ nổi tiếng trong lĩnh vực nghệ thuật như Leonardo da Vinci trong hội họa, Ludwig van Beethoven trong âm nhạc, William Shakespeare trong văn học.", "Nếu bạn yêu thích nghệ thuật đương đại, hãy tìm hiểu về các nghệ sĩ hiện đại như Pablo Picasso trong hội họa, Michael Jackson trong âm nhạc, Hayao Miyazaki trong điện ảnh.", "Những nghệ sĩ như Vincent van Gogh, Wolfgang Amadeus Mozart, Ernest Hemingway được coi là những huyền thoại trong lịch sử nghệ thuật."]
+    },
+    {
+      "tag": "nền văn hóa địa phương",
+      "patterns": ["Bạn có thể giới thiệu về văn hóa địa phương của một quốc gia nào đó không?", "Tôi muốn tìm hiểu về nền văn hóa độc đáo của một khu vực.", "Có những nét văn hóa đặc trưng nào trong quốc gia bạn biết không?"],
+      "responses": ["Mỗi quốc gia và khu vực đều có nền văn hóa độc đáo và phong phú. Ví dụ, Nhật Bản có nền văn hóa truyền thống đa dạng với trà hòa nhạc, kimono và lễ hội Matsuri.", "Ấn Độ nổi tiếng với văn hóa Hindu, các lễ hội màu sắc và nghệ thuật Bharatanatyam.", "Việt Nam có văn hóa đậm đà với ẩm thực phong phú, áo dài truyền thống và các lễ hội truyền thống như Tết Nguyên đán."]
+    },
+    {
+      "tag": "nghệ thuật đương đại",
+      "patterns": ["Bạn có thông tin gì về nghệ thuật đương đại?", "Tôi muốn tìm hiểu về xu hướng nghệ thuật hiện đại.", "Có những nghệ sĩ đương đại nổi tiếng nào mà bạn biết không?"],
+      "responses": ["Nghệ thuật đương đại là một lĩnh vực đa dạng và đầy sáng tạo. Các nghệ sĩ đương đại thường sử dụng các phương pháp và chất liệu không truyền thống để thể hiện ý tưởng và cảm xúc của họ.", "Các xu hướng nghệ thuật đương đại bao gồm nghệ thuật kỹ thuật số, nghệ thuật đường phố, nghệ thuật xanh và nghệ thuật tái chế.", "Một số nghệ sĩ đương đại nổi tiếng bao gồm Banksy với nghệ thuật đường phố, Yayoi Kusama với nghệ thuật phòng trưng và Olafur Eliasson với nghệ thuật trải nghiệm."]
+    },
+    {
+      "tag": "di sản văn hóa",
+      "patterns": ["Bạn có thể giới thiệu về di sản văn hóa của một quốc gia không?", "Tôi muốn tìm hiểu về di sản văn hóa được UNESCO công nhận.", "Có những di tích văn hóa nào đáng đến thăm trong một quốc gia?"],
+      "responses": ["Di sản văn hóa là những di tích, kiến trúc và truyền thống được công nhận vì giá trị văn hóa độc đáo. Ví dụ, Angkor Wat ở Campuchia, Chichen Itza ở Mexico và Colosseum ở Italy đều là di sản văn hóa nổi tiếng.", "Đến với Trung Quốc, bạn có thể khám phá Vạn Lý Trường Thành và Kinh thành Cố đô. Ở Ấn Độ, Taj Mahal và Nhà hát Opera Sydney ở Australia cũng được công nhận là di sản văn hóa.", "Hãy tham quan những di tích văn hóa để tìm hiểu và đắm chìm trong lịch sử và văn hóa đặc trưng của mỗi quốc gia."]
+    },
+    {
+      "tag": "khái niệm kinh tế",
+      "patterns": ["Bạn có thể giải thích về kinh tế là gì không?", "Tôi muốn hiểu về các khái niệm cơ bản trong kinh tế.", "Kinh tế ảnh hưởng như thế nào đến cuộc sống của chúng ta?"],
+      "responses": ["Kinh tế là một hệ thống liên quan đến sản xuất, phân phối và tiêu thụ hàng hóa và dịch vụ. Nó nghiên cứu cách con người quản lý tài nguyên hiếm để đáp ứng nhu cầu và muốn của xã hội.", "Các khái niệm cơ bản trong kinh tế bao gồm cung cầu, lợi nhuận, thông tin sim và tỷ lệ lạm phát.", "Kinh tế ảnh hưởng rất lớn đến cuộc sống của chúng ta, từ việc quyết định mua sắm hàng hóa đến chọn nghề nghiệp và đầu tư tiền bạc."]
+    },
+    {
+      "tag": "chỉ số kinh tế",
+      "patterns": ["Bạn có thể giải thích về chỉ số GDP?", "Tôi muốn tìm hiểu về chỉ số thất nghiệp và chỉ số lạm phát.", "Có những chỉ số kinh tế quan trọng khác mà tôi nên biết không?"],
+      "responses": ["GDP (Gross Domestic Product) là tổng giá trị của các hàng hóa và dịch vụ sản xuất trong một quốc gia trong một khoảng thời gian nhất định. Nó đo lường sức mạnh kinh tế của một quốc gia.", "Chỉ số thất nghiệp đo lường tỷ lệ người lao động không có việc làm trong một quốc gia. Chỉ số lạm phát đo lường mức tăng giá hàng hóa và dịch vụ trong một thời gian nhất định.", "Ngoài GDP, chỉ số kinh tế quan trọng khác bao gồm chỉ số phát triển con người (HDI), chỉ số đói nghèo (Poverty Rate) và chỉ số cạnh tranh (Competitiveness Index)."]
+    },
+    {
+      "tag": "chính sách kinh tế",
+      "patterns": ["Bạn có thông tin về chính sách tiền tệ?", "Tôi muốn hiểu về chính sách tiền tệ và chính sách tài khóa.", "Chính sách kinh tế có ảnh hưởng như thế nào đến nền kinh tế quốc gia?"],
+      "responses": ["Chính sách tiền tệ là những biện pháp mà ngân hàng trung ương và chính phủ áp dụng để điều chỉnh lượng tiền lưu thông trong nền kinh tế. Các biện pháp này bao gồm lãi suất, tỷ giá hối đoái và tín dụng.", "Chính sách tài khóa là những biện pháp mà chính phủ áp dụng để quản lý ngân sách, thu thuế và chi tiêu công cộng.", "Chính sách kinh tế có thể ảnh hưởng đến mức lạm phát, tăng trưởng kinh tế, việc làm và khả năng cạnh tranh của quốc gia trên thị trường quốc tế."]
+    },
+    {
+      "tag": "doanh nghiệp và thị trường",
+      "patterns": ["Bạn có thông tin về quá trình khởi nghiệp?", "Tôi muốn tìm hiểu về sự cạnh tranh trên thị trường.", "Có những doanh nghiệp nào đang nổi tiếng trên thế giới?"],
+      "responses": ["Quá trình khởi nghiệp là quá trình mà người sáng lập thành lập và phát triển một doanh nghiệp mới. Điều này bao gồm từ việc tìm ý tưởng kinh doanh, tạo kế hoạch kinh doanh, thu thập vốn và triển khai sản phẩm hoặc dịch vụ.", "Trên thị trường, doanh nghiệp phải đối mặt với sự cạnh tranh từ các đối thủ khác. Họ cần tìm cách tạo ra lợi thế cạnh tranh và thu hút khách hàng bằng cách cung cấp sản phẩm và dịch vụ tốt nhất.", "Có nhiều doanh nghiệp nổi tiếng trên thế giới như Apple, Microsoft, Amazon, Google, và Samsung. Những doanh nghiệp này đóng vai trò quan trọng trong các lĩnh vực công nghệ, thương mại điện tử và điện thoại di động."]
+    },
+    {
+      "tag": "tăng trưởng kinh tế",
+      "patterns": ["Bạn có thể giải thích về tăng trưởng kinh tế là gì không?", "Tôi muốn tìm hiểu về các yếu tố ảnh hưởng đến tăng trưởng kinh tế.", "Tăng trưởng kinh tế làm thay đổi như thế nào cuộc sống của con người?"],
+      "responses": ["Tăng trưởng kinh tế là tăng về giá trị sản xuất của một quốc gia trong một khoảng thời gian nhất định. Nó đo lường sự phát triển và tiến bộ của nền kinh tế.", "Các yếu tố ảnh hưởng đến tăng trưởng kinh tế bao gồm đầu tư, tiến bộ công nghệ, tăng trưởng dân số và chính sách kinh tế của chính phủ.", "Tăng trưởng kinh tế có thể cải thiện chất lượng cuộc sống của con người thông qua tạo việc làm, nâng cao mức sống và cơ hội phát triển cá nhân."]
+    },
+    {
+      "tag": "kinh tế thị trường",
+      "patterns": ["Bạn có thông tin về kinh tế thị trường?", "Tôi muốn tìm hiểu về vai trò của thị trường trong kinh tế.", "Kinh tế thị trường có ưu điểm và hạn chế gì?"],
+      "responses": ["Kinh tế thị trường là hệ thống kinh tế dựa trên sự tương tác giữa người mua và người bán. Quy luật cung cầu và giá cả được tạo ra từ thị trường tự do.", "Thị trường đóng vai trò quan trọng trong việc xác định giá cả và phân phối tài nguyên hiệu quả. Nó tạo điều kiện thuận lợi cho doanh nghiệp và cạnh tranh.", "Tuy nhiên, kinh tế thị trường cũng có hạn chế như bất bình đẳng thu nhập, không khả thi trong việc cung cấp các dịch vụ công cộng và có thể dẫn đến biến động và khủng hoảng kinh tế."]
+    },
+    {
+      "tag": "đầu tư và tài chính",
+      "patterns": ["Bạn có thông tin về đầu tư và tài chính?", "Tôi muốn tìm hiểu về cách đầu tư thông minh.", "Có những phương pháp nào để quản lý tài chính cá nhân?"],
+      "responses": ["Đầu tư là việc đặt tiền vào các tài sản như cổ phiếu, trái phiếu hoặc bất động sản với hy vọng thu lời trong tương lai. Điều này giúp tăng gia tài và bảo vệ giá trị tiền tệ trước lạm phát.", "Để đầu tư thông minh, hãy tìm hiểu và hiểu rõ về các loại tài sản và rủi ro liên quan. Diversification (đa dạng hóa) là một nguyên tắc quan trọng để giảm rủi ro.", "Để quản lý tài chính cá nhân, hãy lập kế hoạch ngân sách, tiết kiệm và đầu tư một phần thu nhập, tránh tiêu xài vô độ và quản lý nợ nần một cách hợp lý."]
+    },
+    {
+      "tag": "thương mại quốc tế",
+      "patterns": ["Bạn có thông tin về thương mại quốc tế?", "Tôi muốn tìm hiểu về lợi ích của thương mại tự do.", "Có những hiệp định thương mại quốc tế nổi bật nào không?"],
+      "responses": ["Thương mại quốc tế là hoạt động buôn bán hàng hóa và dịch vụ giữa các quốc gia. Nó giúp tăng cường giao lưu văn hóa và kinh tế giữa các quốc gia.", "Thương mại tự do có lợi ích là giúp giảm giá cả, tăng lựa chọn hàng hóa và thúc đẩy cạnh tranh, đồng thời cải thiện hiệu quả sản xuất và sử dụng tài nguyên.", "Một số hiệp định thương mại quốc tế nổi bật bao gồm Hiệp định Đối tác xuyên Thái Bình Dương (CPTPP) và Hiệp định Thương mại tự do Châu Âu - Việt Nam (EVFTA)."]
+    },
+    {
+      "tag": "chính sách chính trị",
+      "patterns": ["Bạn có thể giải thích về chính sách chính trị là gì không?", "Tôi muốn tìm hiểu về các chính sách xã hội của một quốc gia.", "Chính sách chính trị ảnh hưởng như thế nào đến cuộc sống của người dân?"],
+      "responses": ["Chính sách chính trị là các quy định và hướng dẫn của chính phủ liên quan đến quản lý và điều hành quốc gia. Nó bao gồm các chính sách kinh tế, xã hội, đối ngoại, an ninh và môi trường.", "Các chính sách xã hội như chính sách giáo dục, chăm sóc sức khỏe, chính sách lao động và chính sách bảo vệ xã hội có tác động lớn đến cuộc sống và phúc lợi của người dân.", "Chính sách chính trị cũng ảnh hưởng đến quyền và tự do của công dân, cơ hội phát triển và mức sống trong xã hội."]
+    },
+    {
+      "tag": "hệ thống chính trị",
+      "patterns": ["Bạn có thông tin về hệ thống chính trị?", "Tôi muốn tìm hiểu về cách các quốc gia tổ chức và điều hành chính quyền.", "Có những loại hệ thống chính trị nào phổ biến trên thế giới?"],
+      "responses": ["Hệ thống chính trị là cách mà một quốc gia tổ chức và điều hành chính quyền. Có nhiều loại hệ thống chính trị như chính quyền đại diện, chính quyền tự do, chính quyền dân chủ và chính quyền tự động.", "Một số quốc gia có chế độ tổng thống, trong khi các quốc gia khác có hệ thống quân chủ hoặc hệ thống bất ổn với chính quyền độc tài.", "Hệ thống chính trị của một quốc gia có thể phản ánh văn hóa, lịch sử và giá trị của dân tộc."]
+    },
+    {
+      "tag": "các vấn đề chính trị đương đại",
+      "patterns": ["Bạn có thông tin về các vấn đề chính trị đương đại?", "Tôi muốn tìm hiểu về các thách thức và vấn đề đang diễn ra trong chính trị thế giới.", "Có những diễn biến chính trị nổi bật gần đây không?"],
+      "responses": ["Các vấn đề chính trị đương đại bao gồm biến động chính trị, quan hệ quốc tế, đối đầu giữa các quốc gia và thay đổi khí hậu chính trị. Các vấn đề này thường ảnh hưởng đến hòa bình và ổn định toàn cầu.", "Gần đây, có nhiều diễn biến chính trị nổi bật như cuộc bầu cử tổng thống ở một số quốc gia, vụ việc tranh chấp biên giới và các vụ xung đột quốc tế.", "Thách thức đối diện thế giới bao gồm các vấn đề di cư, khủng hoảng kinh tế và vấn đề quản lý tài nguyên tự nhiên."]
+    },
+    {
+      "tag": "tư tưởng chính trị",
+      "patterns": ["Bạn có thể giới thiệu về các tư tưởng chính trị không?", "Tôi muốn tìm hiểu về các phong trào chính trị và tư tưởng của chúng.", "Có những tư tưởng chính trị nổi bật trong lịch sử không?"],
+      "responses": ["Các tư tưởng chính trị là các quan điểm và ý tưởng về cách tổ chức xã hội và chính phủ. Có nhiều tư tưởng chính trị như chủ nghĩa dân tộc, chủ nghĩa xã hội, tự do cá nhân và đảng phái chính trị.", "Các phong trào chính trị như chủ nghĩa cộng sản, dân tộc chủ nghĩa, bảo thủ và tiến bộ có ảnh hưởng lớn đến chính trị toàn cầu.", "Trong lịch sử, các tư tưởng chính trị của các nhà tư tưởng như Karl Marx, Mahatma Gandhi, Martin Luther King Jr. và Nelson Mandela đã ảnh hưởng sâu sắc đến nhân loại và các cuộc vận động xã hội."]
+    },
+    {
+      "tag": "đối tượng chính trị",
+      "patterns": ["Bạn có thông tin về các đối tượng chính trị không?", "Tôi muốn tìm hiểu về các tổ chức và cá nhân tham gia chính trị.", "Có những đối tượng chính trị nổi bật trên thế giới không?"],
+      "responses": ["Các đối tượng chính trị bao gồm các tổ chức chính trị, đảng phái, nhà lãnh đạo chính trị và các nhóm quan tâm đến việc tham gia vào quyết định chính trị.", "Có nhiều tổ chức chính trị như Liên Hợp Quốc, Hiệp hội các quốc gia Đông Nam Á (ASEAN) và các tổ chức phi chính phủ như Greenpeace.", "Các nhà lãnh đạo chính trị như Tổng thống, Thủ tướng và các chính trị gia khác đóng vai trò quan trọng trong việc định hình chính trị và chính sách của một quốc gia."]
+    },
+    {
+      "tag": "vấn đề xã hội",
+      "patterns": ["Bạn có thể giải thích về các vấn đề xã hội đang diễn ra không?", "Tôi muốn tìm hiểu về các thách thức và vấn đề xã hội đang tồn tại trong xã hội.", "Có những diễn biến xã hội nổi bật gần đây không?"],
+      "responses": ["Các vấn đề xã hội bao gồm các thách thức về bình đẳng, công bằng, quyền con người, môi trường, giáo dục và an ninh.", "Một số vấn đề xã hội nổi bật gần đây là biến đổi khí hậu, phân biệt chủng tộc, nạn đói và di cư.", "Thách thức xã hội ảnh hưởng đến mọi người trong xã hội và đòi hỏi sự đồng lòng và hợp tác của cộng đồng để tìm giải pháp."]
+    },
+    {
+      "tag": "đa dạng và bình đẳng",
+      "patterns": ["Bạn có thông tin về đa dạng và bình đẳng không?", "Tôi muốn tìm hiểu về vai trò của đa dạng văn hóa trong xã hội.", "Đa dạng và bình đẳng ảnh hưởng như thế nào đến cuộc sống của con người?"],
+      "responses": ["Đa dạng là sự khác biệt và đa dạng về văn hóa, ngôn ngữ, tôn giáo, dân tộc và quốc tịch trong một cộng đồng hoặc xã hội.", "Bình đẳng là nguyên tắc đối xử công bằng và trao cho mọi người cơ hội và quyền lợi bình đẳng trong xã hội.", "Đa dạng văn hóa giúp mở rộng kiến thức và sẵn sàng tiếp nhận các quan điểm và giá trị khác nhau. Bình đẳng đem lại cơ hội công bằng cho mọi người để phát triển và thăng tiến."]
+    },
+    {
+      "tag": "cộng đồng và tương tác xã hội",
+      "patterns": ["Bạn có thông tin về tầm quan trọng của cộng đồng và tương tác xã hội không?", "Tôi muốn tìm hiểu về vai trò của cộng đồng trong xã hội.", "Tương tác xã hội là gì và tại sao nó quan trọng?"],
+      "responses": ["Cộng đồng là nhóm người chung chí hướng và có quan hệ gắn kết trong một khu vực hoặc xã hội.", "Cộng đồng đóng vai trò quan trọng trong việc hỗ trợ, bảo vệ và phát triển các thành viên. Nó tạo điều kiện để tăng cường tình đoàn kết và hợp tác trong xã hội.", "Tương tác xã hội là sự giao tiếp và tương tác giữa các cá nhân và nhóm trong xã hội. Nó giúp xây dựng mối quan hệ, trao đổi thông tin và thúc đẩy sự hiểu biết giữa con người."]
+    },
+    {
+      "tag": "công bằng xã hội",
+      "patterns": ["Bạn có thể giải thích về khái niệm công bằng xã hội không?", "Tôi muốn tìm hiểu về vai trò của công bằng trong xây dựng một xã hội hòa bình và ổn định.", "Tại sao công bằng xã hội quan trọng?"],
+      "responses": ["Công bằng xã hội là nguyên tắc và mục tiêu đảm bảo mọi người đều có cơ hội truy cập và sử dụng công bằng các tài nguyên và quyền lợi trong xã hội.", "Công bằng xã hội giúp giảm bất bình đẳng và tạo điều kiện thuận lợi cho mọi người để tham gia vào quyết định và phát triển xã hội.", "Khi xây dựng một xã hội công bằng, chúng ta đảm bảo mọi người đều được tôn trọng, bình đẳng và có quyền được phát triển và thăng tiến."]
+    },
+    {
+      "tag": "văn hoá xã hội",
+      "patterns": ["Bạn có thông tin về văn hoá xã hội không?", "Tôi muốn tìm hiểu về vai trò của văn hoá trong hình thành xã hội.", "Tại sao văn hoá xã hội quan trọng trong cuộc sống của chúng ta?"],
+      "responses": ["Văn hoá xã hội là tập hợp các giá trị, niềm tin, thói quen và phong tục của một cộng đồng hoặc xã hội.", "Văn hoá đóng vai trò quan trọng trong việc xác định hành vi và thái độ của con người, hình thành ý thức cộng đồng và quyết định văn hóa.", "Văn hoá xã hội giúp bảo tồn và phát triển di sản văn hóa, tạo điều kiện để các cá nhân tương tác và cống hiến vào cuộc sống chung."]
+    },
+    {
+      "tag": "công dân xã hội",
+      "patterns": ["Bạn có thông tin về tư cách công dân xã hội không?", "Tôi muốn tìm hiểu về quyền và trách nhiệm của công dân trong xã hội.", "Tại sao việc tham gia vào công dân xã hội quan trọng?"],
+      "responses": ["Công dân xã hội là người dân có quyền và trách nhiệm tham gia vào các hoạt động xã hội nhằm cải thiện điều kiện sống và phát triển xã hội.", "Công dân xã hội đóng góp vào việc xây dựng và duy trì môi trường xã hội hòa bình, ổn định và phát triển bền vững.", "Việc tham gia vào công dân xã hội giúp mọi người hiểu rõ về quyền và trách nhiệm của họ trong xã hội và hướng tới tầm nhìn chung về sự công bằng và phát triển."]
+    },
+    {
+      "tag": "công tác xã hội",
+      "patterns": ["Bạn có thông tin về công tác xã hội không?", "Tôi muốn tìm hiểu về công tác xã hội và vai trò của các tổ chức xã hội.", "Các công tác xã hội thường thực hiện những nhiệm vụ gì?"],
+      "responses": ["Công tác xã hội là hoạt động của các tổ chức xã hội và các nhà hoạt động xã hội nhằm giải quyết các vấn đề xã hội và nâng cao chất lượng cuộc sống của cộng đồng.", "Các công tác xã hội thường thực hiện nhiệm vụ như cung cấp dịch vụ xã hội, hỗ trợ người nghèo, bảo vệ quyền con người, đấu tranh cho bình đẳng xã hội và thúc đẩy phát triển bền vững.", "Các tổ chức xã hội như Tổ chức Phi chính phủ, tổ chức từ thiện và các tổ chức phi lợi nhuận thường thực hiện các công tác xã hội trên khắp thế giới."]
+    },
+    {
+      "tag": "văn hóa địa phương",
+      "patterns": ["Bạn có thông tin về văn hóa địa phương không?", "Tôi muốn tìm hiểu về các đặc trưng văn hóa của một khu vực hoặc cộng đồng cụ thể.", "Văn hóa địa phương có ảnh hưởng như thế nào đến đời sống của người dân?"],
+      "responses": ["Văn hóa địa phương là tập hợp các giá trị, thói quen, phong tục và niềm tin đặc trưng cho một khu vực hoặc cộng đồng cụ thể.", "Văn hóa địa phương tạo nên đặc điểm riêng cho mỗi khu vực và đóng góp vào bản sắc và đa dạng văn hóa của một quốc gia.", "Văn hóa địa phương ảnh hưởng đến các khía cạnh của đời sống của người dân như cách ăn mặc, thời quen ẩm thực, nghệ thuật và phong cách sống."]
+    },
+    {
+      "tag": "phương tiện truyền thông",
+      "patterns": ["Bạn có thông tin về các phương tiện truyền thông không?", "Tôi muốn tìm hiểu về vai trò của các phương tiện truyền thông trong xã hội.", "Có những loại phương tiện truyền thông nào phổ biến hiện nay?"],
+      "responses": ["Phương tiện truyền thông là các công cụ và kênh thông tin dùng để truyền tải thông tin và tin tức đến công chúng.", "Các phương tiện truyền thông truyền thống bao gồm truyền hình, đài phát thanh, báo chí và tạp chí. Hiện nay, internet và mạng xã hội cũng trở thành các phương tiện truyền thông quan trọng.", "Phương tiện truyền thông đóng vai trò quan trọng trong việc cung cấp thông tin, giáo dục và giải trí cho mọi người, đồng thời là công cụ quan trọng để xây dựng ý thức cộng đồng và thúc đẩy sự giao tiếp xã hội."]
+    },
+    {
+      "tag": "nhà báo và truyền thông",
+      "patterns": ["Bạn có thông tin về vai trò của nhà báo trong truyền thông không?", "Tôi muốn tìm hiểu về công việc của nhà báo và tác động của họ đến xã hội.", "Nhà báo có vai trò quan trọng trong việc xây dựng ý thức và thông tin cho công chúng không?"],
+      "responses": ["Nhà báo là những người chuyên nghiệp trong việc thu thập, xác minh và truyền tải thông tin đến công chúng thông qua các phương tiện truyền thông.", "Nhà báo đóng vai trò quan trọng trong việc cung cấp thông tin chính xác và đáng tin cậy cho công chúng, giúp người dân hiểu rõ về các sự kiện và vấn đề xã hội.", "Tuy nhiên, nhà báo cũng phải đối mặt với áp lực và thách thức trong công việc, bao gồm bảo vệ quyền tự do báo chí và tránh tin tức giả mạo."]
+    },
+    {
+      "tag": "truyền thông xã hội",
+      "patterns": ["Bạn có thông tin về truyền thông xã hội không?", "Tôi muốn tìm hiểu về tác động của truyền thông xã hội đến cuộc sống và xã hội.", "Truyền thông xã hội có ảnh hưởng như thế nào đến ý thức cộng đồng?"],
+      "responses": ["Truyền thông xã hội là các nền tảng và ứng dụng trực tuyến cho phép người dùng tạo, chia sẻ và truyền tải thông tin và nội dung đến cộng đồng mạng.", "Truyền thông xã hội đã tạo ra một cuộc cách mạng trong việc giao tiếp và tương tác giữa con người, đóng góp vào việc xây dựng ý thức cộng đồng và gắn kết xã hội.", "Tuy nhiên, truyền thông xã hội cũng đôi khi gặp các vấn đề như tin đồn, thông tin sai lệch và vi phạm quyền riêng tư."]
+    },
+    {
+      "tag": "quảng cáo và truyền thông",
+      "patterns": ["Bạn có thông tin về vai trò của quảng cáo trong truyền thông không?", "Tôi muốn tìm hiểu về cách quảng cáo ảnh hưởng đến ý thức và hành vi của người tiêu dùng.", "Quảng cáo có tác động lớn đến nền kinh tế và xã hội không?"],
+      "responses": ["Quảng cáo là các thông điệp thương mại được truyền tải thông qua các phương tiện truyền thông nhằm quảng bá và bán sản phẩm và dịch vụ.", "Quảng cáo có tác động lớn đến ý thức và hành vi của người tiêu dùng, ảnh hưởng đến quyết định mua sắm và thúc đẩy tiêu thụ hàng hóa.", "Ngoài ra, quảng cáo cũng đóng góp vào nền kinh tế và xã hội bằng cách tạo ra việc làm, thu hút đầu tư và thúc đẩy phát triển kinh tế."]
+    },
+    {
+      "tag": "đánh giá sản phẩm",
+      "patterns": ["Bạn có thông tin về cách đánh giá sản phẩm không?", "Tôi muốn tìm hiểu về cách đánh giá và so sánh các sản phẩm trước khi mua.", "Có những tiêu chí nào quan trọng khi đánh giá sản phẩm?"],
+      "responses": ["Đánh giá sản phẩm là quá trình xem xét, đánh giá và so sánh các thông tin liên quan đến sản phẩm để đưa ra quyết định mua hàng thông minh.", "Các tiêu chí đánh giá sản phẩm bao gồm chất lượng, giá cả, tính năng, đánh giá của người dùng và thương hiệu.", "Ngoài ra, bạn cũng có thể tham khảo các đánh giá và bài đánh giá sản phẩm trên các trang web và diễn đàn mua sắm để có cái nhìn tổng quan và chi tiết hơn."]
+    },
+    {
+      "tag": "mua sắm trực tuyến",
+      "patterns": ["Bạn có thông tin về mua sắm trực tuyến không?", "Tôi muốn tìm hiểu về lợi ích và rủi ro khi mua sắm trực tuyến.", "Có những trang web mua sắm uy tín mà bạn biết không?"],
+      "responses": ["Mua sắm trực tuyến là quá trình mua hàng thông qua internet và các trang web mua sắm trực tuyến.", "Lợi ích của mua sắm trực tuyến bao gồm tiện lợi, lựa chọn đa dạng, giá cả cạnh tranh và giao hàng tận nhà.", "Tuy nhiên, cũng có một số rủi ro như hàng giả, lừa đảo và quản lý tài khoản trực tuyến an toàn."]
+    },
+    {
+      "tag": "chương trình khuyến mãi",
+      "patterns": ["Bạn có thông tin về các chương trình khuyến mãi không?", "Tôi muốn tìm hiểu về cách tìm kiếm và sử dụng các chương trình khuyến mãi khi mua sắm.", "Có những loại chương trình khuyến mãi nào thường gặp?"],
+      "responses": ["Các chương trình khuyến mãi là các ưu đãi, giảm giá và quà tặng được cung cấp bởi các cửa hàng và nhà bán lẻ nhằm thu hút và khuyến khích người tiêu dùng mua hàng.", "Có nhiều loại chương trình khuyến mãi như giảm giá giá sản phẩm, khuyến mãi mua một tặng một, giảm giá khi thanh toán bằng thẻ và chương trình tích điểm.", "Để tìm kiếm và sử dụng chương trình khuyến mãi, bạn có thể tham khảo các trang web coupon, theo dõi các trang mạng xã hội và đăng ký nhận thông tin từ các cửa hàng."]
+    },
+    {
+      "tag": "trải nghiệm mua sắm",
+      "patterns": ["Bạn có thông tin về trải nghiệm mua sắm không?", "Tôi muốn tìm hiểu về cách tạo trải nghiệm mua sắm tốt hơn khi đi mua hàng.", "Trải nghiệm mua sắm có ảnh hưởng như thế nào đến sự hài lòng của khách hàng?"],
+      "responses": ["Trải nghiệm mua sắm là cảm nhận và kinh nghiệm của người tiêu dùng khi mua hàng tại các cửa hàng và nhà bán lẻ.", "Tạo trải nghiệm mua sắm tốt bao gồm việc cải thiện dịch vụ, thiết kế cửa hàng hấp dẫn và tạo không gian mua sắm thoải mái.", "Trải nghiệm mua sắm đóng góp vào sự hài lòng của khách hàng và ảnh hưởng đến việc quay lại mua hàng trong tương lai."]
+    },
+    {
+      "tag": "lập kế hoạch sự kiện",
+      "patterns": ["Bạn có thông tin về cách lập kế hoạch sự kiện không?", "Tôi muốn tìm hiểu về quy trình tổ chức và lập kế hoạch cho một sự kiện.", "Có những yếu tố nào cần xem xét khi lập kế hoạch sự kiện?"],
+      "responses": ["Lập kế hoạch sự kiện là quá trình xác định, thiết kế và tổ chức các hoạt động và chi tiết liên quan đến một sự kiện.", "Các yếu tố quan trọng khi lập kế hoạch sự kiện bao gồm mục tiêu, đối tượng tham gia, ngân sách, địa điểm, thời gian và chương trình sự kiện.", "Để có một sự kiện thành công, bạn cần phải xem xét cẩn thận và chuẩn bị kỹ lưỡng từ giai đoạn lập kế hoạch cho đến thực hiện."]
+    },
+    {
+      "tag": "sự kiện doanh nghiệp",
+      "patterns": ["Bạn có thông tin về các sự kiện doanh nghiệp không?", "Tôi muốn tìm hiểu về vai trò của các sự kiện trong hoạt động kinh doanh.", "Có những loại sự kiện doanh nghiệp nào phổ biến?"],
+      "responses": ["Sự kiện doanh nghiệp là các hoạt động tổ chức bởi các công ty và doanh nghiệp nhằm giới thiệu sản phẩm, thương hiệu hoặc kết nối với khách hàng, đối tác và cộng đồng kinh doanh.", "Các loại sự kiện doanh nghiệp phổ biến bao gồm hội nghị, triển lãm, buổi gặp gỡ khách hàng, buổi tiệc và sự kiện gây quỹ.", "Sự kiện doanh nghiệp đóng vai trò quan trọng trong việc xây dựng mối quan hệ, thúc đẩy doanh số bán hàng và củng cố uy tín của doanh nghiệp."]
+    },
+    {
+      "tag": "ngày lễ truyền thống",
+      "patterns": ["Bạn có thông tin về các ngày lễ truyền thống không?", "Tôi muốn tìm hiểu về nguồn gốc và ý nghĩa của các ngày lễ truyền thống.", "Có những ngày lễ truyền thống nào quan trọng trong nền văn hóa của một quốc gia?"],
+      "responses": ["Ngày lễ truyền thống là các dịp đặc biệt được tôn vinh và kỷ niệm hàng năm trong một quốc gia hoặc cộng đồng.", "Mỗi ngày lễ truyền thống thường có nguồn gốc từ lịch sử, văn hóa hoặc tôn giáo và mang ý nghĩa đặc biệt đối với cộng đồng.", "Các ngày lễ truyền thống như Ngày Lễ Độc Lập, Ngày Quốc Khánh và Tết Trung Thu thường được tổ chức với các hoạt động vui chơi, lễ hội và các nghi lễ truyền thống."]
+    },
+    {
+      "tag": "sự kiện nghệ thuật và văn hóa",
+      "patterns": ["Bạn có thông tin về các sự kiện nghệ thuật và văn hóa không?", "Tôi muốn tìm hiểu về các triển lãm, buổi biểu diễn nghệ thuật và sự kiện văn hóa.", "Sự kiện nghệ thuật và văn hóa có ảnh hưởng như thế nào đến đời sống văn hóa của một quốc gia?"],
+      "responses": ["Sự kiện nghệ thuật và văn hóa là các hoạt động trình diễn và truyền tải nghệ thuật, văn hóa và di sản văn hóa của một quốc gia hoặc cộng đồng.", "Các sự kiện này bao gồm triển lãm nghệ thuật, buổi biểu diễn âm nhạc, vở kịch, phim ảnh, lễ hội và các hoạt động văn hóa truyền thống.", "Sự kiện nghệ thuật và văn hóa có vai trò quan trọng trong việc bảo tồn và phát triển văn hóa của một quốc gia, thúc đẩy sự sáng tạo và giao lưu nghệ thuật giữa các nền văn hóa khác nhau."]
+    }
+  ]
+}

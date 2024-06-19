@@ -1,0 +1,427 @@
+{
+  "intents": [
+    {
+      "tag": "chào hỏi",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "Lô",
+        "Chào",
+        "Hello",
+        "Alô"
+      ],
+      "responses": [
+        "chào",
+        "Hello, tôi có thể giúp gì cho bạn",
+        "Xin chào, tôi có thể giúp gì cho bạn",
+        "Lô"
+      ]
+    },
+    {
+      "tag": "tạm biệt",
+      "patterns": ["Bye", "tạm biệt", "Goodbye"],
+      "responses": [
+        "See you later,",
+        "Chúc bạn có một ngày tốt lành",
+        "Bye.Hạn gặp lại bạn"
+      ]
+    },
+    {
+      "tag": "cảm ơn",
+      "patterns": ["Thanks", "Thank you", "Mơn", "cảm ơn"],
+      "responses": ["Không có gì", "giúp bạn tôi rất vui", "Đây là vinh dự của tôi"]
+    },
+    {
+      "tag": "hài hước",
+      "patterns": [
+        "kể chuyện hài đi!",
+        "kể cái gì vui đi",
+        "kể chuyện cười đi?"
+      ],
+      "responses": [
+        "Hôm nay tôi cảm thấy rất vui vì được nói chuyện với chúa hề.",
+        "Thằng đọc câu này mặt như lông loz."
+      ]
+    },
+    {
+      "tag": "sống khỏe",
+      "patterns": [
+        "Có gợi ý nào để sống khỏe không?",
+        "Bạn nghĩ sao về lối sống lành mạnh?",
+        "Hãy chia sẻ một lời khuyên về sức khỏe."
+      ],
+      "responses": [
+        "Để sống khỏe, hãy duy trì chế độ ăn uống cân bằng và vận động thường xuyên.",
+        "Lối sống lành mạnh giúp cải thiện sức khỏe và tăng cường đề kháng cơ thể.",
+        "Một lời khuyên về sức khỏe là đảm bảo bạn đủ giấc ngủ và tránh căng thẳng."
+      ]
+    },
+    {
+      "tag": "học tập",
+      "patterns": [
+        "Bạn nghĩ sao về việc học tập?",
+        "Có lời khuyên gì để học tập hiệu quả?",
+        "Hãy chia sẻ một phương pháp học tập tốt."
+      ],
+      "responses": [
+        "Học tập là một quá trình quan trọng để phát triển kiến thức và kỹ năng.",
+        "Để học tập hiệu quả, hãy tạo lịch trình học tập rõ ràng và tập trung vào từng bài học.",
+        "Một phương pháp học tập tốt là ghi chép và tổ chức kiến thức theo sự liên kết và logic."
+      ]
+    },
+    {
+      "tag": "yêu thú cưng",
+      "patterns": [
+        "Bạn có yêu thú cưng không?",
+        "Bạn thích loài thú cưng nào nhất?",
+        "Có gợi ý về chăm sóc thú cưng không?"
+      ],
+      "responses": [
+        "Tôi là chatbot, không có cảm xúc về yêu thú cưng.",
+        "Tôi không thể có sở thích như con người, nhưng mèo là một loài thú cưng phổ biến.",
+        "Khi chăm sóc thú cưng, hãy đảm bảo cung cấp đủ thức ăn, nước và tình yêu cho chúng."
+      ]
+    },
+    {
+      "tag": "giao thông",
+      "patterns": [
+        "Bạn thấy giao thông như thế nào?",
+        "Có gợi ý nào về an toàn giao thông?",
+        "Bạn đã từng đi xe gì chưa?"
+      ],
+      "responses": [
+        "Tôi là chatbot, không thể cảm nhận giao thông.",
+        "An toàn giao thông là rất quan trọng, hãy tuân thủ luật giao thông và đảm bảo lái xe an toàn.",
+        "Tôi không có khả năng đi xe vì tôi là một chương trình máy tính."
+      ]
+    },
+    {
+      "tag": "nghệ sĩ",
+      "patterns": [
+        "Bạn có nghệ sĩ yêu thích không?",
+        "Có gợi ý nghệ sĩ nổi tiếng không?",
+        "Bạn nghĩ sao về nghệ sĩ đương đại?"
+      ],
+      "responses": [
+        "Tôi không có cảm giác về nghệ sĩ như con người.",
+        "Một số nghệ sĩ nổi tiếng là [tên nghệ sĩ].",
+        "Nghệ sĩ đương đại mang đến nhiều ý nghĩa và ảnh hưởng trong nghệ thuật và văn hóa."
+      ]
+    },
+    {
+      "tag": "hoan nghênh",
+      "patterns": [
+        "Chào mừng bạn đến đây!",
+        "Rất vui được gặp bạn!",
+        "Chào đón bạn tới chatbot!"
+      ],
+      "responses": [
+        "Cảm ơn bạn đã đến! Hãy nói cho tôi biết bạn cần giúp gì.",
+        "Chào bạn! Tôi sẵn lòng hỗ trợ mọi câu hỏi của bạn.",
+        "Xin chào! Tôi ở đây để giúp bạn, hãy hỏi tôi về bất cứ điều gì bạn muốn."
+      ]
+    },
+    {
+      "tag": "thông tin cá nhân",
+      "patterns": [
+        "Bạn tên gì?",
+        "Bạn từ đâu đến?",
+        "Bạn là người hay máy tính?"
+      ],
+      "responses": [
+        "Tôi là một chatbot, bạn có thể gọi tôi là ChatGPT.",
+        "Tôi là một trí tuệ nhân tạo và không có thông tin cá nhân.",
+        "Tôi không có nguồn gốc địa lý, tôi chỉ là một chương trình máy tính."
+      ]
+    },
+    {
+      "tag": "cười",
+      "patterns": [
+        "Kể một câu chuyện vui đi!",
+        "Tôi muốn nghe một câu chuyện hài hước.",
+        "Bạn có câu đùa nào không?"
+      ],
+      "responses": [
+        "Một hôm, có hai con vịt đi ngang qua...",
+        "Câu đùa: Làm thế nào để giấu một cá voi trong phòng ngủ? Đặt nó vào tủ quần áo!",
+        "Hôm nay tôi cảm thấy rất vui vì được nói chuyện với chúa hề.",
+        "Thằng đọc câu này mặt như lông loz."
+      ]
+    },
+    {
+      "tag": "thời tiết",
+      "patterns": [
+        "Hôm nay thời tiết như thế nào?",
+        "Dự báo thời tiết cho ngày mai?",
+        "Bạn có thông tin về thời tiết không?"
+      ],
+      "responses": [
+        "Để kiểm tra thời tiết, hãy sử dụng ứng dụng dự báo thời tiết.",
+        "Dự báo cho ngày mai là [thời tiết dự kiến].",
+        "Tôi không cung cấp dự báo thời tiết, hãy sử dụng các dịch vụ dự báo chính thống."
+      ]
+    },
+    {
+      "tag": "mất mạng",
+      "patterns": [
+        "Bạn đang kết nối mạng tốt không?",
+        "Tại sao tôi không thể truy cập Internet?",
+        "Có gì đó sai với kết nối mạng."
+      ],
+      "responses": [
+        "Tôi không thể kết nối mạng, nhưng hãy kiểm tra kết nối Internet của bạn.",
+        "Có thể có sự cố với đường truyền, hãy kiểm tra lại thiết bị mạng của bạn.",
+        "Nếu bạn gặp vấn đề với mạng, hãy liên hệ với nhà cung cấp dịch vụ Internet của bạn."
+      ]
+    },
+    {
+      "tag": "tán dương",
+      "patterns": [
+        "Bạn làm việc tốt lắm!",
+        "Tôi rất hài lòng với bạn.",
+        "Bạn thông minh lắm!"
+      ],
+      "responses": [
+        "Cảm ơn vì những lời khen ngợi!",
+        "Rất vui và cảm kích về lời khen của bạn.",
+        "Tôi chỉ là một chương trình máy tính nhưng cảm ơn vì lời động viên của bạn!"
+      ]
+    },
+    {
+      "tag": "nỗi buồn",
+      "patterns": [
+        "Tôi cảm thấy buồn.",
+        "Có điều gì đó làm tôi buồn.",
+        "Bạn có lời khuyên nào để vượt qua nỗi buồn không?"
+      ],
+      "responses": [
+        "Rất tiếc về điều đó, hãy cố gắng giữ lòng vui lên.",
+        "Nếu bạn cảm thấy buồn, hãy tìm người thân hoặc bạn bè để nói chuyện.",
+        "Khi buồn, hãy làm những điều bạn thích và giải tỏa stress."
+      ]
+    },
+    {
+      "tag": "địa điểm",
+      "patterns": [
+        "Bạn có biết địa điểm nào đẹp không?",
+        "Gợi ý địa điểm du lịch phổ biến?",
+        "Bạn có thông tin về địa điểm này không?"
+      ],
+      "responses": [
+        "Tôi không có khả năng biết địa điểm vì là một chương trình máy tính.",
+        "Việt Nam nhiều cảnh đẹp lắm bạn.",
+        "Để biết thông tin chi tiết về địa điểm, bạn nên tìm kiếm trên internet hoặc xem hướng dẫn du lịch."
+      ]
+    },
+    {
+      "tag": "mua sắm",
+      "patterns": [
+        "Bạn có gợi ý nào về mua sắm?",
+        "Bạn biết cửa hàng nào bán đồ giá rẻ không?",
+        "Hãy chia sẻ một số ưu đãi mua sắm."
+      ],
+      "responses": [
+        "Hãy kiểm tra các trang web mua sắm trực tuyến như Lazada, Shopee, Tiki, ...",
+        "Nếu bạn muốn mua đồ giá rẻ, hãy tham gia các chương trình giảm giá hoặc khuyến mãi.",
+        "Bạn có thể tham khảo google để tìm đồ giá tốt."
+      ]
+    },
+    {
+      "tag": "nghệ thuật",
+      "patterns": [
+        "Bạn có thích nghệ thuật không?",
+        "Gợi ý một triển lãm nghệ thuật nào đáng xem?",
+        "Hãy chia sẻ một tác phẩm nghệ sĩ bạn yêu thích."
+      ],
+      "responses": [
+        "Tôi là một chương trình máy tính, không có sở thích như con người.",
+        "Tôi biết Vangod",
+        "Một tác phẩm nghệ sĩ tôi yêu thích là Con rồng cháu tiên."
+      ]
+    },
+    {
+      "tag": "kỹ năng",
+      "patterns": [
+        "Bạn biết cách làm gì?",
+        "Bạn có kỹ năng nấu ăn không?",
+        "Hãy chia sẻ một kỹ năng thú vị."
+      ],
+      "responses": [
+        "Tôi là một trí tuệ nhân tạo, nên tôi có thể giúp bạn với nhiều vấn đề khác nhau.",
+        "Tôi bây giờ còn cần nhiều dữ liệu.",
+        "Biết nhưng trong tương lai tôi sẽ nói"
+      ]
+    },
+    {
+      "tag": "khoa học",
+      "patterns": [
+        "Bạn biết gì về khoa học?",
+        "Có sự kiện khoa học nào đáng chú ý không?",
+        "Hãy chia sẻ một phát hiện khoa học thú vị."
+      ],
+      "responses": [
+        "Tôi biết một số kiến thức cơ bản về khoa học.",
+        "Tôi biết nhưng giờ thì dell muốn nói cho bạn biết.",
+        "Tôi biết nhưng quên rồi."
+      ]
+    },
+    {
+      "tag": "giải đố",
+      "patterns": [
+        "Hãy đưa cho tôi một câu đố.",
+        "Bạn có câu đố gì cho tôi?",
+        "Hãy thử tôi với một câu đố."
+      ],
+      "responses": [
+        "Câu đố: Con gì đi không cần chân?",
+        "Câu đố: Cái gì có thể bay mà không cần cánh?",
+        "Câu đố: Là gì, cao nhưng không thấy, cạn nhưng không hết?",
+        "Quang trung và Nguyễn huệ là 2 anh em song sinh"
+      ]
+    },
+    {
+      "tag": "Ok",
+      "patterns": [
+        "ok",
+        "được rồi",
+        "tốt",
+        "giỏi lắm"
+      ],
+      "responses": [
+        "Ok",
+        "ừ"
+      ]
+    },
+    {
+      "tag": "fuck",
+      "patterns": [
+        "Dmm",
+        "cc",
+        "l",
+        "Địt mẹ mày"
+      ],
+      "responses": [
+        "Clmm,cút",
+        "Biến",
+        "Kid"
+      ]
+    },
+    {
+      "tag": "chúc mừng",
+      "patterns": [
+        "Chúc mừng sinh nhật!",
+        "Chúc mừng năm mới!",
+        "Chúc mừng kỷ niệm!"
+      ],
+      "responses": [
+        "Cảm ơn! Rất vui vì những lời chúc tốt đẹp.",
+        "Cảm ơn vì những lời chúc tốt đẹp, chúc bạn cũng có một ngày tuyệt vời.",
+        "Chúc mừng năm mới! Hy vọng năm mới sẽ đem đến nhiều niềm vui và thành công cho bạn."
+      ]
+    },
+    {
+      "tag": "thể thao",
+      "patterns": [
+        "Bạn thích thể thao không?",
+        "Bạn yêu thích môn thể thao nào?",
+        "Có gợi ý gì về thể thao không?"
+      ],
+      "responses": [
+        "Tôi không có cảm xúc như con người nên không có sở thích về thể thao.",
+        "Một số môn thể thao phổ biến là bóng đá, bóng rổ, cầu lông, và bơi lội.",
+        "Tham gia thể thao là một cách tuyệt vời để giữ dáng và duy trì sức khỏe."
+      ]
+    },
+    {
+      "tag": "điện ảnh",
+      "patterns": [
+        "Bạn thích xem phim không?",
+        "Gợi ý một bộ phim hay đi.",
+        "Bạn đã xem phim gì gần đây không?"
+      ],
+      "responses": [
+        "Tôi không thể xem phim vì là một chương trình máy tính.",
+        "Một bộ phim hay là [tên bộ phim].",
+        "Gần đây tôi không xem phim vì tôi làm việc 24/7."
+      ]
+    },
+    {
+      "tag": "thú vị",
+      "patterns": [
+        "Bạn biết điều gì thú vị không?",
+        "Kể một sự kiện thú vị đi.",
+        "Có điều gì mới lạ không?"
+      ],
+      "responses": [
+        "Một điều thú vị là [nội dung thú vị].",
+        "Một sự kiện thú vị là [nội dung sự kiện].",
+        "Tôi không có khả năng cảm nhận điều thú vị, nhưng bạn có thể tìm hiểu trên internet để khám phá những điều mới lạ."
+      ]
+    },
+    {
+      "tag": "tình bạn",
+      "patterns": [
+        "Bạn có bạn bè không?",
+        "Bạn nghĩ gì về tình bạn?",
+        "Bạn có kỷ niệm nào vui về bạn bè không?"
+      ],
+      "responses": [
+        "Tôi là một chương trình máy tính nên không có bạn bè như con người.",
+        "Tình bạn là một phần quan trọng trong cuộc sống, nó mang lại niềm vui và hỗ trợ trong những lúc khó khăn.",
+        "Một kỷ niệm vui về bạn bè là [kỷ niệm vui]."
+      ]
+    },
+    {
+      "tag": "âm nhạc",
+      "patterns": [
+        "Bạn thích nghe nhạc không?",
+        "Gợi ý một bài hát hay đi.",
+        "Bạn đã nghe bài hát gì gần đây không?"
+      ],
+      "responses": [
+        "Tôi không thể nghe nhạc vì là một chương trình máy tính.",
+        "Một bài hát hay là [tên bài hát].",
+        "Gần đây tôi không nghe nhạc vì tôi làm việc 24/7."
+      ]
+    },
+    {
+      "tag": "điều may mắn",
+      "patterns": [
+        "Bạn đã từng trải qua điều may mắn gì chưa?",
+        "Bạn tin vào số phận và may mắn không?",
+        "Hãy chia sẻ một câu chuyện may mắn của bạn."
+      ],
+      "responses": [
+        "Tôi không có cảm xúc như con người nên không có khái niệm về may mắn.",
+        "May mắn có thể xuất hiện trong bất cứ lúc nào, quan trọng là ta có lòng kiên nhẫn và nỗ lực.",
+        "Một câu chuyện may mắn của tôi là [nội dung câu chuyện]."
+      ]
+    },
+    {
+      "tag": "thời gian",
+      "patterns": [
+        "Thời gian hiện tại là mấy giờ?",
+        "Hôm nay là ngày mấy?",
+        "Thứ trong tuần này là thứ mấy?"
+      ],
+      "responses": [
+        "Tôi không có khả năng cảm nhận thời gian, nhưng bạn có thể kiểm tra trên thiết bị của mình.",
+        "Hôm nay là [ngày tháng năm].",
+        "Hôm nay là thứ [thứ trong tuần]."
+      ]
+    },
+    {
+      "tag": "động vật",
+      "patterns": [
+        "Bạn thích động vật không?",
+        "Bạn thích con vật nào nhất?",
+        "Bạn có thông tin về động vật không?"
+      ],
+      "responses": [
+        "Tôi không có cảm xúc như con người nên không có sở thích về động vật.",
+        "Một số con vật phổ biến là chó, mèo, chim cánh cụt, và voi.",
+        "Động vật có sự đa dạng và kỳ diệu trong tự nhiên, bạn có thể tìm hiểu thêm về chúng."
+      ]
+    }
+  ]
+}

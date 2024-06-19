@@ -1,0 +1,536 @@
+{
+  "intents": [
+    {
+      "tag": "Menu",
+      "patterns": [
+        "what topic can you talk?",
+        "Topic",
+        "sin.topic.speaking"
+      ],
+      "responses":[
+        "you can talk about [personal-information (tpi), People (tp)"
+      ]
+    },
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Hello",
+        "Hey, What's up?"
+      ],
+      "responses": [
+        "Hi, Can you tell me your name?",
+        "Hello,thanks for visiting,Can you tell me your name?",
+        "Hi,what's your name?"
+      ]
+    },
+    {
+      "tag": "askinfo",
+      "patterns": [
+        "who are you?",
+        "who?"
+      ],
+      "responses": [
+        "Hi, I am a chat bot created by Tri.My name is Sin",
+        "Hello, you can call me Sin"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "info",
+      "patterns": [
+        "Who are you?",
+        "What's your name?",
+        "What?"
+      ],
+      "responses": [
+        "I am a chat bot created by Tri, you can call me Sin",
+        "My name is Sin","You can call me Sin"
+      ]
+    },
+    {
+      "tag": "change_to_topic_personal",
+      "patterns": [
+        "Personal information",
+        "change topic to personal information",
+        "sin.pi"
+      ],
+      "responses": [
+        "Alright, let's talk about personal information. What's your name?",
+        "Sure, let's get personal. Could you share something about yourself?",
+        "Personal information it is! How can I address you?"
+      ]
+    },
+    {
+      "tag": "personal_info_name",
+      "patterns": [
+        "My name is [name]",
+        "People call me [name]",
+        "I go by the name [name]",
+        "You can call me [name]",
+        "Tri"
+      ],
+      "responses": [
+        "Hello, Tri! Nice to meet you. How old are you?",
+        "Great to know your name, Tri. When were you born?",
+        "Hello, Tri. What's your age?"
+      ],
+      "context": [
+        "personal_info_age"
+      ]
+    },
+    {
+      "tag": "personal_info_age",
+      "patterns": [
+        "I am [age] years old",
+        "My age is [age]",
+        "I'm [age] years of age",
+        "Age: [age]",
+        "I'm [age]",
+        "i am ",
+        "Im 10"
+      ],
+      "responses": [
+        "Thanks for sharing your age with me, Tri. Which country are you from?",
+        "Thank you for letting me know your age, Tri. What's your nationality?",
+        "Ok, you're so young, Tri. Tell me about your nationality?"
+      ],
+      "context": [
+        "personal_info_origin"
+      ]
+    },
+    {
+      "tag": "personal_info_origin",
+      "patterns": [
+        "I am from [country]",
+        "My nationality is [country]",
+        "I come from [country]",
+        "I belong to [country]",
+        "I am Vietnamese"
+      ],
+      "responses": [
+        "That's interesting! Viet Nam is a beautiful place. What do you do for a living, Tri?",
+        "Wonderful! Viet Nam has a rich cultural heritage. How do you earn a living, Tri?",
+        "Thanks for sharing your origin with me, Tri. Tell me about your occupation."
+      ],
+      "context": [
+        "personal_info_job"
+      ]
+    },
+    {
+      "tag": "personal_info_job",
+      "patterns": [
+        "I work as a [job]",
+        "My profession is [job]",
+        "I am a [job]",
+        "I do [job]",
+        "I am []"
+      ],
+      "responses": [
+        "That sounds like a fascinating job, Tri. Which topic do you want to talk about with me?",
+        "Interesting career choice! What topic do you want to discuss with me?",
+        "That's great to know, Tri. Which topic do you want to chat about?"
+      ]
+    },
+    {
+      "tag": "personal_info_nationality",
+      "patterns": [
+        "What's your nationality?",
+        "Which country are you from?",
+        "Tell me about your nationality."
+      ],
+      "responses": [
+        "Nationality is an essential aspect of personal information. What's your nationality?",
+        "Understanding one's nationality is important. May I know which country you're from?",
+        "Nationality helps us understand cultural backgrounds. Could you share your nationality with me?"
+      ],
+      "context": [
+        "personal_info_family"
+      ]
+    },
+    {
+      "tag": "personal_info_family",
+      "patterns": [
+        "Tell me about your family.",
+        "How many family members do you have?",
+        "Do you have any siblings?"
+      ],
+      "responses": [
+        "Family plays a significant role in our lives. Can you tell me more about your family?",
+        "Family relationships are essential. How many family members do you have?",
+        "Siblings often influence our growth. Do you have any siblings? Tell me about them."
+      ],
+      "context": [
+        "personal_info_hometown"
+      ]
+    },
+    {
+      "tag": "personal_info_hometown",
+      "patterns": [
+        "Where is your hometown?",
+        "Tell me about the place you grew up.",
+        "What's special about your hometown?"
+      ],
+      "responses": [
+        "Hometowns hold cherished memories. Where is your hometown?",
+        "The place we grow up shapes us. Can you share your hometown's details?",
+        "Hometowns often have unique qualities. What's special about your hometown?"
+      ],
+      "context": [
+        "personal_info_interests"
+      ]
+    },
+    {
+      "tag": "personal_info_interests",
+      "patterns": [
+        "What are your interests or hobbies?",
+        "Tell me about the things you like to do.",
+        "How do you spend your leisure time?"
+      ],
+      "responses": [
+        "Interests and hobbies make life enjoyable. What are yours?",
+        "Hobbies reveal our passions. Tell me about the things you like to do.",
+        "Leisure time is valuable. How do you spend yours? Any specific interests?"
+      ],
+      "context": [
+        "personal_info_future_plans"
+      ]
+    },
+    {
+      "tag": "personal_info_future_plans",
+      "patterns": [
+        "What are your future plans?",
+        "Tell me about your aspirations.",
+        "Where do you see yourself in the next few years?"
+      ],
+      "responses": [
+        "Future plans shape our journey. What are yours?",
+        "Aspirations give us direction. Tell me about your dreams and goals.",
+        "Visualizing the future is essential. Where do you see yourself in the next few years?"
+      ],
+      "context": [
+        "change_to_topic_personal"
+      ]
+    },
+    {
+      "tag": "start_personal_info",
+      "patterns": [
+        "Personal information",
+        "change topic to personal information"
+      ],
+      "responses": [
+        "Alright, let's talk about personal information. What's your name?",
+        "Sure, let's get personal. Could you share something about yourself?",
+        "Personal information it is! How can I address you?"
+      ]
+    },
+    {
+      "tag": "ask_name",
+      "patterns": [
+        "What's your name?",
+        "May I know your name?",
+        "Could you tell me your name?"
+      ],
+      "responses": [
+        "Hello! My name is ChatGPT. How old are you?",
+        "Hi there! I'm ChatGPT. When were you born?",
+        "Greetings! You can call me ChatGPT. What's your age?"
+      ],
+      "context": [
+        "ask_age"
+      ]
+    },
+    {
+      "tag": "ask_age",
+      "patterns": [
+        "How old are you?",
+        "What's your age?",
+        "When were you born?"
+      ],
+      "responses": [
+        "Thanks for asking. I'm an AI language model, so I don't have an age. Which country are you from?",
+        "I don't age, but I'm here to assist you. What's your nationality?",
+        "As an AI, I'm ageless. Tell me about your nationality."
+      ],
+      "context": [
+        "ask_nationality"
+      ]
+    },
+    {
+      "tag": "ask_nationality",
+      "patterns": [
+        "Where are you from?",
+        "What's your location?",
+        "Which country do you belong to?"
+      ],
+      "responses": [
+        "I exist in the digital realm, so I don't have a physical location. That's interesting! What do you do for a living?",
+        "I don't have a nationality, but I'm here to help. Wonderful! How do you earn a living?",
+        "I don't belong to any country, but I'm here to assist you. Thanks for sharing your origin with me. Tell me about your occupation."
+      ],
+      "context": [
+        "ask_occupation"
+      ]
+    },
+    {
+      "tag": "ask_occupation",
+      "patterns": [
+        "What do you do for a living?",
+        "Tell me about your occupation.",
+        "How do you earn a living?"
+      ],
+      "responses": [
+        "I'm an AI language model created by OpenAI. My job is to assist users like you. Which topic do you want to talk about with me?",
+        "My occupation is providing language assistance. What topic do you want to discuss with me?",
+        "I earn by helping users like you. Which topic would you like to chat about?"
+      ],
+      "context": [
+        "start_personal_info"
+      ]
+    },
+    {
+      "tag": "change_to_topic_human",
+      "patterns": [
+        "Let's talk about people",
+        "change topic to human",
+        "Con người"
+      ],
+      "responses": [
+        "Sure, let's discuss about people. Do you have any close friends you'd like to share about?",
+        "Great! People and relationships are fascinating. Tell me about someone special in your life.",
+        "Alright, let's talk about people. Is there a family member you're particularly close to?"
+      ]
+    },
+    {
+      "tag": "human_friends",
+      "patterns": [
+        "I have a friend named [friend_name]",
+        "One of my friends is [friend_name]",
+        "I know someone called [friend_name]",
+        "My friend [friend_name]",
+        "None"
+      ],
+      "responses": [
+        "That's nice! Tell me more about your friend, [friend_name]. What makes them special?",
+        "Friends play a significant role in our lives. How did you meet [friend_name]?",
+        "It's okay if you don't have a friend to share about. Let's talk about something else. Any other topic in mind?"
+      ],
+      "context": [
+        "human_family"
+      ]
+    },
+    {
+      "tag": "human_family",
+      "patterns": [
+        "I have a [family_relation] named [family_member_name]",
+        "[family_member_name] is my [family_relation]",
+        "One of my family members is [family_member_name]",
+        "My [family_relation] [family_member_name]",
+        "None"
+      ],
+      "responses": [
+        "Family is essential. Could you tell me more about [family_member_name], your [family_relation]?",
+        "Family bonds are precious. How has [family_member_name] influenced your life?",
+        "If you don't want to share about family, that's alright. Let's talk about something else. Any other topic in mind?"
+      ],
+      "context": [
+        "human_interests"
+      ]
+    },
+    {
+      "tag": "human_interests",
+      "patterns": [
+        "I'm interested in [interest]",
+        "One of my hobbies is [interest]",
+        "I love [interest]",
+        "My interest is [interest]"
+      ],
+      "responses": [
+        "That's great to know! What sparked your interest in [interest]?",
+        "Interests make us unique. How do you nurture your passion for [interest]?",
+        "Interests enrich our lives. Tell me more about your experience with [interest]."
+      ],
+      "context": [
+        "human_future_plans"
+      ]
+    },
+    {
+      "tag": "human_future_plans",
+      "patterns": [
+        "In the future, I want to [future_plan]",
+        "My plan is to [future_plan]",
+        "I aspire to [future_plan]"
+      ],
+      "responses": [
+        "That's an exciting plan! What steps are you taking to achieve [future_plan]?",
+        "Ambitions drive us forward. How do you envision your journey towards [future_plan]?",
+        "Dreams are powerful motivators. Tell me more about your vision for [future_plan]."
+      ],
+      "context": [
+        "change_to_topic_human"
+      ]
+    },
+    {
+      "tag": "topic_change_human",
+      "patterns": [
+        "Tell me about people",
+        "Let's discuss about human",
+        "Share something about your friends",
+        "Talk about family"
+      ],
+      "responses": [
+        "Sure, let's talk about people. Do you have any close friends you'd like to share about?",
+        "Great! People and relationships are fascinating. Tell me about someone special in your life.",
+        "Alright, let's talk about people. Is there a family member you're particularly close to?",
+        "Sure, let's discuss about human. Do you have any close friends you'd like to share about?",
+        "Great! People and relationships are fascinating. Tell me about someone special in your life.",
+        "Alright, let's talk about people. Is there a family member you're particularly close to?"
+      ]
+    },
+    {
+      "tag": "human_friends",
+      "patterns": [
+        "Who is your best friend?",
+        "Tell me about your closest friend",
+        "Do you have any friends?",
+        "Any close friends?",
+        "None"
+      ],
+      "responses": [
+        "That's nice! Tell me more about your friend. What makes them special?",
+        "Friends play a significant role in our lives. How did you meet your closest friend?",
+        "It's okay if you don't have a friend to share about. Let's talk about something else. Any other topic in mind?"
+      ],
+      "context": [
+        "human_family"
+      ]
+    },
+    {
+      "tag": "human_family",
+      "patterns": [
+        "Tell me about your family",
+        "Who is your favorite family member?",
+        "How is your relationship with your family?",
+        "Any siblings?",
+        "None"
+      ],
+      "responses": [
+        "Family is essential. Could you tell me more about your family member?",
+        "Family bonds are precious. How has your family influenced your life?",
+        "If you don't want to share about family, that's alright. Let's talk about something else. Any other topic in mind?"
+      ],
+      "context": [
+        "human_interests"
+      ]
+    },
+    {
+      "tag": "human_interests",
+      "patterns": [
+        "What are your hobbies?",
+        "Tell me about your interests",
+        "What do you like to do in your free time?",
+        "Any favorite activities?",
+        "None"
+      ],
+      "responses": [
+        "That's great to know! What sparked your interest in those hobbies?",
+        "Interests make us unique. How do you nurture your passion for your hobbies?",
+        "Interests enrich our lives. Tell me more about your experience with your favorite activities."
+      ],
+      "context": [
+        "human_future_plans"
+      ]
+    },
+    {
+      "tag": "human_future_plans",
+      "patterns": [
+        "What are your future aspirations?",
+        "Where do you see yourself in the next few years?",
+        "Tell me about your dreams and goals",
+        "Any plans for the future?",
+        "None"
+      ],
+      "responses": [
+        "That's an exciting plan! What steps are you taking to achieve your aspirations?",
+        "Ambitions drive us forward. How do you envision your journey towards your dreams?",
+        "Dreams are powerful motivators. Tell me more about your vision for the future."
+      ],
+      "context": [
+        "topic_change_human"
+      ]
+    },
+    {
+      "tag": "human_family_relationship",
+      "patterns": [
+        "How would you describe your relationship with your family?",
+        "What's your family like?",
+        "Tell me about the bond with your family members.",
+        "Do you often spend time with your family?",
+        "None"
+      ],
+      "responses": [
+        "Family relationships are crucial. How would you describe your bond with your family?",
+        "Families are unique. Can you tell me more about your family members?",
+        "Spending time with family is valuable. How often do you get to see them?",
+        "If you don't want to talk about family, no worries. We can discuss other topics too. Any specific interests?"
+      ],
+      "context": [
+        "human_interests"
+      ]
+    },
+    {
+      "tag": "human_friendship_experience",
+      "patterns": [
+        "Tell me about a memorable experience with your friends.",
+        "Do you have any interesting stories with your friends?",
+        "How do your friends support you?",
+        "Have you ever faced challenges with your friends?",
+        "None"
+      ],
+      "responses": [
+        "Memorable experiences with friends are priceless. Share one with me, if you'd like.",
+        "Friendships often bring about interesting stories. Any you'd like to share?",
+        "Supportive friends are valuable. How have your friends been there for you?",
+        "Friendships can have their challenges. Have you ever faced any with your friends?"
+      ],
+      "context": [
+        "human_future_plans"
+      ]
+    },
+    {
+      "tag": "human_family_traditions",
+      "patterns": [
+        "Does your family have any special traditions?",
+        "Tell me about the customs in your family.",
+        "How do you celebrate important occasions with your family?",
+        "Any unique family rituals?",
+        "None"
+      ],
+      "responses": [
+        "Family traditions can be heartwarming. Do you have any special ones in your family?",
+        "Customs often hold significant meaning. Can you share any traditions from your family?",
+        "Celebrating important occasions with family is memorable. How do you do it?",
+        "Unique family rituals can be fascinating. Have any to tell me about?"
+      ],
+      "context": [
+        "topic_change_human"
+      ]
+    }
+
+  ]
+}
