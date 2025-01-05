@@ -32,8 +32,12 @@ class Game:
         self.RIGHT = pygame.transform.scale(self.RIGHT_IMAGE, (self.P_WIDTH, self.P_HEIGHT))
 
         img = Image.open('assets/env.jpg')
-        img = img.convert('RGBA')
+        img = img.convert('RGBA')  # Đảm bảo rằng ảnh có định dạng phù hợp
+
+        # Chuyển ảnh Pillow thành Surface cho pygame
         img = pygame.image.fromstring(img.tobytes(), img.size, img.mode)
+
+        # Kích thước lại ảnh
         self.SPACE = pygame.transform.scale(img, (self.WIDTH, self.HEIGHT))
 
     def draw(self, right, left, right_bullets, left_bullets, right_health, left_health):
@@ -99,8 +103,7 @@ class Game:
 
     def draw_winner(self, text):
         draw_text = self.WINNER_FONT.render(text, 1, self.WHITE)
-        self.WIN.blit(draw_text,
-                      (self.WIDTH / 2 - draw_text.get_width() / 2, self.HEIGHT / 2 - draw_text.get_height() / 2))
+        self.WIN.blit(draw_text, (self.WIDTH / 2 - draw_text.get_width() / 2, self.HEIGHT / 2 - draw_text.get_height() / 2))
         pygame.display.update()
         pygame.time.delay(2000)
 
@@ -135,7 +138,8 @@ class Game:
 
     def main_menu(self):
         menu_font = pygame.font.SysFont('comicsans', 100)
-        button_font = pygame.font.Font("assets/Arial.ttf", 50)
+        button_font = pygame.font.Font("assets/Arial.ttf",
+                                       50)
         play_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT // 2 - 50, 200, 65)
         instructions_button = pygame.Rect(self.WIDTH // 2 - 230, self.HEIGHT // 2 + 50, 480, 65)
         run = True
@@ -169,33 +173,35 @@ class Game:
                         self.show_instructions()
 
     def show_instructions(self):
-        instructions_font = pygame.font.SysFont('comicsans', 60)
-        instructions_text1 = instructions_font.render("Sử dụng phím W,A,S,D và", 1, self.WHITE)
-        instructions_text2 = instructions_font.render("phím Mũi tên để điều khiển", 1, self.WHITE)
-        back_button = pygame.Rect(self.WIDTH // 2 - 100, self.HEIGHT // 2 + 100, 200, 65)
-
+        instruction_font = pygame.font.Font("assets/Arial.ttf", 30)
         run = True
         while run:
             self.WIN.fill(self.BLACK)
-            self.WIN.blit(instructions_text1, (self.WIDTH / 2 - instructions_text1.get_width() / 2, 100))
-            self.WIN.blit(instructions_text2, (self.WIDTH / 2 - instructions_text2.get_width() / 2, 200))
-            pygame.draw.rect(self.WIN, self.WHITE, back_button)
 
-            back_text = instructions_font.render("Quay lại", 1, self.BLACK)
-            self.WIN.blit(back_text,
-                          (back_button.x + back_button.width // 2 - back_text.get_width() // 2, back_button.y))
+            instructions = [
+                "Hướng dẫn Chơi:",
+                "Người chơi Trái: dùng W/A/S/D để di chuyển, nút T để đánh.",
+                "Người chơi Phải : dùng các nút di chuyển </>/v/^, nút P để đánh.",
+                "Nhấn Q để trở về HOME."
+            ]
+
+            for i, line in enumerate(instructions):
+                text = instruction_font.render(line, 1, self.WHITE)
+                self.WIN.blit(text, (self.WIDTH / 2 - text.get_width() / 2, 100 + i * 40))
+
+            creator_text = instruction_font.render("cre: Trisphan", 1, self.WHITE)
+            self.WIN.blit(creator_text, (10, self.HEIGHT - 40))
 
             pygame.display.update()
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     run = False
                     pygame.quit()
-                if event.type == pygame.MOUSEBUTTONDOWN:
-                    mouse_pos = pygame.mouse.get_pos()
-                    if back_button.collidepoint(mouse_pos):
+
+                if event.type == pygame.KEYDOWN:
+                    if event.key == pygame.K_q:
                         return
-
-
 
     def main(self):
         try:
@@ -257,7 +263,6 @@ class Game:
                 self.draw(right, left, right_bullets, left_bullets, right_health, left_health)
         except:
             pass
-
 
 if __name__ == "__main__":
     game = Game()
